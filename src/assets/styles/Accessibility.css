@@ -1,0 +1,94 @@
+.accessibility-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-50%);
+}
+
+.accessibility-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--primary-blue);
+  padding: 0.75rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.accessibility-panel button,
+.accessibility-panel a {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: none;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s, color 0.2s;
+}
+
+.accessibility-panel button,
+.accessibility-panel a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.accessibility-panel button:hover,
+.accessibility-panel a:hover {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+}
+
+.accessibility-toggle {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 0rem;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .accessibility-panel {
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    right: 0rem;
+  }
+
+  .accessibility-panel.open {
+    display: flex;
+  }
+
+  .accessibility-toggle {
+    display: block;
+  }
+}
+
+.dark-mode .accessibility-panel button,
+.dark-mode .accessibility-panel a {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.dark-mode .accessibility-panel button:hover,
+.dark-mode .accessibility-panel a:hover {
+  background: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-hover-fg);
+}
+
+.dark-mode .accessibility-toggle {
+  background-color: var(--primary-yellow);
+  color: var(--primary-black);
+}

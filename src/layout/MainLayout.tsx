@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import '../assets/styles/MainLayout.css';
+import Accessibility from '../components/Accessibility/Accessibility';
 
 const MainLayout = () => {
     return (
@@ -7,7 +8,7 @@ const MainLayout = () => {
             <header className="layout-header">
                 <h1>Mi Aplicación</h1>
             </header>
-
+            <Accessibility />
             <main className="layout-main">
                 <Outlet />
             </main>
