@@ -89,6 +89,6 @@
 }
 
 .dark-mode .accessibility-toggle {
-  background-color: var(--primary-yellow);
+  background-color: var(--primary-blue);
   color: var(--primary-black);
 }

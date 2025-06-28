@@ -37,6 +37,7 @@
 
   --logo-height: 60px;
   --logo-height-small: 40px;
+  --logo-height-large: 160px;
 
   --accent-bg: var(--primary-blue);
   --accent-fg: var(--primary-white);
@@ -51,20 +52,20 @@
   --btn-active-fg: var(--primary-blue);
 
   /* Primary */
-  --btn-primary-bg: var(--primary-yellow);
-  --btn-primary-fg: var(--primary-black);
-  --btn-primary-hover-bg: #e0ac00;
-  --btn-primary-hover-fg: var(--primary-black);
-  --btn-primary-active-bg: #d49e00;
-  --btn-primary-active-fg: var(--primary-black);
+  --btn-primary-bg: var(--primary-blue);
+  --btn-primary-fg: var(--primary-white);
+  --btn-primary-hover-bg: #2f37a0;
+  --btn-primary-hover-fg: var(--primary-white);
+  --btn-primary-active-bg: #262d84;
+  --btn-primary-active-fg: var(--primary-white);
 
   /* Secondary */
-  --btn-secondary-bg: var(--primary-blue);
-  --btn-secondary-fg: var(--primary-white);
-  --btn-secondary-hover-bg: #2f37a0;
-  --btn-secondary-hover-fg: var(--primary-white);
-  --btn-secondary-active-bg: #262d84;
-  --btn-secondary-active-fg: var(--primary-white);
+  --btn-secondary-bg: var(--primary-yellow);
+  --btn-secondary-fg: var(--primary-black);
+  --btn-secondary-hover-bg: #e0ac00;
+  --btn-secondary-hover-fg: var(--primary-black);
+  --btn-secondary-active-bg: #d49e00;
+  --btn-secondary-active-fg: var(--primary-black);
 
   /* Danger */
   --btn-danger-bg: var(--color-error);

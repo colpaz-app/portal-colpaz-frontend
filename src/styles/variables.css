@@ -1,0 +1,31 @@
+:root {
+  --sp-0: 0rem;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 1rem;
+  --sp-4: 1.5rem;
+  --sp-5: 3rem;
+}
+
+.mb-0 { margin-bottom: var(--sp-0); }
+.mb-1 { margin-bottom: var(--sp-1); }
+.mb-2 { margin-bottom: var(--sp-2); }
+.mb-3 { margin-bottom: var(--sp-3); }
+.mb-4 { margin-bottom: var(--sp-4); }
+.mb-5 { margin-bottom: var(--sp-5); }
+
+.mt-0 { margin-top: var(--sp-0); }
+.mt-1 { margin-top: var(--sp-1); }
+.mt-2 { margin-top: var(--sp-2); }
+.mt-3 { margin-top: var(--sp-3); }
+.mt-4 { margin-top: var(--sp-4); }
+.mt-5 { margin-top: var(--sp-5); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.my-0 { margin-top: var(--sp-0); margin-bottom: var(--sp-0); }
+.my-1 { margin-top: var(--sp-1); margin-bottom: var(--sp-1); }
+.my-2 { margin-top: var(--sp-2); margin-bottom: var(--sp-2); }
+.my-3 { margin-top: var(--sp-3); margin-bottom: var(--sp-3); }
+.my-4 { margin-top: var(--sp-4); margin-bottom: var(--sp-4); }
+.my-5 { margin-top: var(--sp-5); margin-bottom: var(--sp-5); }
