@@ -11,12 +11,22 @@
     },
     "administration": {
       "label": "Administración",
-      "title": "Ir a Administración"
+      "title": "Ir a Administración",
+      "entry": {
+        "label": "Entrada de Administración",
+        "title": "Ir a Entrada de Administración"
+      }
     },
     "logout": {
       "label": "Cerrar sesión",
       "title": "Ir a Cerrar sesión"
     }
+  },
+  "adminEntry": {
+    "imageAlt": "Imagen visual de bienvenida",
+    "welcomeTitle": "Bienvenido",
+    "welcomeMessage": "Has accedido correctamente a la plataforma. Desde aquí podrás gestionar usuarios, revisar estadísticas, configurar parámetros y administrar todas las funcionalidades clave del sistema. Tómate un momento para explorar las herramientas disponibles y asegurarte de que todo esté en orden antes de continuar.",
+    "enterButton": "Administración"
   },
   "login": {
     "title": "Iniciar sesión",

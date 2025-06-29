@@ -2,10 +2,18 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--primary-white);
 }
 
 .layout-main {
   flex: 1;
-  padding: 0rem 2rem 0rem 2rem;
-  margin-top: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.dark-mode .layout {
+  background-color: var(--accent-bg);
+}
+
+.dark-mode .layout-main {
+  background-color: var(--accent-bg);
 }

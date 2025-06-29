@@ -11,12 +11,22 @@
     },
     "administration": {
       "label": "Administration",
-      "title": "Go to Administration"
+      "title": "Go to Administration",
+      "entry": {
+        "label": "Administration Entry",
+        "title": "Go to Administration Entry"
+      }
     },
     "logout": {
       "label": "Logout",
       "title": "Go to Logout"
     }
+  },
+  "adminEntry": {
+    "imageAlt": "Welcome visual image",
+    "welcomeTitle": "Welcome",
+    "welcomeMessage": "You have successfully accessed the platform. From here, you can manage users, review statistics, configure parameters, and oversee all key system features. Take a moment to explore the available tools and ensure everything is in place before proceeding.",
+    "enterButton": "Administration"
   },
   "login": {
     "title": "Login",
