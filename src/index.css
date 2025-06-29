@@ -2,7 +2,9 @@
   font-family: var(--font-family-base);
 }
 
-body{
-  margin: 0px;
-  padding: 0px;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
