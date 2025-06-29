@@ -2,14 +2,14 @@ import { Outlet } from 'react-router-dom'
 import '../assets/styles/MainLayout.css';
 import Accessibility from '../components/Accessibility';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import MegaNavbar from '../components/MegaNavbar';
 
 const MainLayout = () => {
     return (
         <div className="layout">
             <Header />
-            <Navbar />
+            <MegaNavbar />
             <Accessibility />
             <main className="layout-main">
                 <Outlet />
