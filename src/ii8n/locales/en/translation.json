@@ -1,8 +1,22 @@
 {
-  "home":{
+  "home": {
     "home": "Home",
     "administration": "Administration",
     "logout": "Logout"
+  },
+  "menu": {
+    "home": {
+      "label": "Home",
+      "title": "Go to Home"
+    },
+    "administration": {
+      "label": "Administration",
+      "title": "Go to Administration"
+    },
+    "logout": {
+      "label": "Logout",
+      "title": "Go to Logout"
+    }
   },
   "login": {
     "title": "Login",

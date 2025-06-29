@@ -38,6 +38,7 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item }) => {
                     <NavLink
                         to={item.path}
                         className="menu-title clickable"
+                        title={item.title ? t(item.title) : undefined}
                         onClick={() => isMobileScreen && setOpen(false)}
                     >
                         {t(item.label)}
@@ -68,6 +69,7 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item }) => {
                                         <li key={j}>
                                             <NavLink
                                                 to={child.path}
+                                                title={child.title ? t(child.title) : undefined}
                                                 onClick={() => isMobileScreen && setOpen(false)}
                                             >
                                                 {t(child.label)}

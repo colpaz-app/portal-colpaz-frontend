@@ -2,45 +2,21 @@ import type { MenuItem } from '../types/MenuItem';
 
 const menuItems: MenuItem[] = [
     {
-        label: 'Inicio',
+        label: 'menu.home.label',
         path: '/',
+        title: 'menu.home.title',
     },
     {
-        label: 'Administración',
+        label: 'menu.administration.label',
         protected: true,
-        children: [
-            {
-                title: 'Gestión de Usuarios',
-                items: [
-                    { label: 'Listado de Usuarios', path: '/admin/users' },
-                    { label: 'Roles y Permisos', path: '/admin/roles' },
-                ],
-            },
-            {
-                items: [
-                    { label: 'Parámetros', path: '/admin/settings' },
-                    { label: 'Estadísticas', path: '/admin/stats' },
-                ],
-            },
-            {
-                items: [
-                    { label: 'Parámetros', path: '/admin/settings' },
-                    { label: 'Estadísticas', path: '/admin/stats' },
-                ],
-            },
-            {
-                title: 'Gestión de Usuarios',
-                items: [
-                    { label: 'Listado de Usuarios', path: '/admin/users' },
-                    { label: 'Roles y Permisos', path: '/admin/roles' },
-                ],
-            },
-        ],
+        path: '/admin',
+        title: 'menu.administration.title',
     },
     {
-        label: 'Cerrar sesión',
+        label: 'menu.logout.label',
         path: '/logout',
         protected: true,
+        title: 'menu.logout.title',
     },
 ];
 

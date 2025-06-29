@@ -1,8 +1,22 @@
 {
-  "home":{
+  "home": {
     "home": "Inicio",
     "administration": "Administración",
     "logout": "Cerrar Sesión"
+  },
+  "menu": {
+    "home": {
+      "label": "Inicio",
+      "title": "Ir a Inicio"
+    },
+    "administration": {
+      "label": "Administración",
+      "title": "Ir a Administración"
+    },
+    "logout": {
+      "label": "Cerrar sesión",
+      "title": "Ir a Cerrar sesión"
+    }
   },
   "login": {
     "title": "Iniciar sesión",
