@@ -1,7 +1,15 @@
 import '../../assets/styles/Header.css';
 import logo from '../../assets/images/Logo.png';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+
+    const { i18n } = useTranslation();
+
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        i18n.changeLanguage(e.target.value);
+    };
+
     return (
         <>
             <header className="main-header">
@@ -14,7 +22,7 @@ const Header = () => {
                 </div>
 
                 <div className="header-right">
-                    <select className="language-select" aria-label="Seleccionar idioma">
+                    <select className="language-select" aria-label="Seleccionar idioma" value={i18n.language} onChange={handleChange}>
                         <option value="es">ES</option>
                         <option value="en">EN</option>
                     </select>

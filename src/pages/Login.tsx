@@ -1,8 +1,12 @@
 import Button from "../components/Button/Button"
 import '../assets/styles/Login.css';
 import { images } from "../assets/images";
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="login-container">
             <div className="login-image-section">
@@ -16,7 +20,7 @@ const Login = () => {
                     className="login-form-logo responsive-only"
                 />
 
-                <h2 className="login-title mb-4">Iniciar Sesión</h2>
+                <h2 className="login-title mb-4">{t('login.title')}</h2>
                 <form className="login-form">
                     <label htmlFor="email">Correo electrónico</label>
                     <input type="email" id="email" placeholder="Ingresar correo eléctronico" required />
