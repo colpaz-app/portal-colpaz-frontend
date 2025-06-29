@@ -1,4 +1,9 @@
 {
+  "home":{
+    "home": "Home",
+    "administration": "Administration",
+    "logout": "Logout"
+  },
   "login": {
     "title": "Login",
     "username": "Username",
@@ -13,6 +18,10 @@
     "success": "Login successful.",
     "errorTitle": "Authentication Error",
     "successTitle": "Welcome"
+  },
+  "logout": {
+    "title": "Logging out...",
+    "message": "Redirecting to the home page"
   },
   "common": {
     "close": "Close"

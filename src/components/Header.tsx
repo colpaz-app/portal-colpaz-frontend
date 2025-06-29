@@ -1,10 +1,18 @@
 import '../assets/styles/Header.css';
+import { useState, useEffect } from 'react';
 import logo from '../assets/images/Logo.png';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
     const { i18n, t } = useTranslation();
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setIsAuthenticated(!!token);
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         i18n.changeLanguage(e.target.value);
@@ -31,6 +39,16 @@ const Header = () => {
                         <option value="es">ES</option>
                         <option value="en">EN</option>
                     </select>
+                    {!isAuthenticated && (
+                        <Link
+                            to="/login"
+                            className="login-icon"
+                            aria-label={t('login.title')}
+                            title={t('login.title')}
+                        >
+                            <i className="fas fa-user" aria-hidden="true"></i>
+                        </Link>
+                    )}
                 </div>
             </header>
 

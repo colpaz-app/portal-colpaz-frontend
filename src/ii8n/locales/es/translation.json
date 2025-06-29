@@ -1,4 +1,9 @@
 {
+  "home":{
+    "home": "Inicio",
+    "administration": "Administración",
+    "logout": "Cerrar Sesión"
+  },
   "login": {
     "title": "Iniciar sesión",
     "username": "Nombre de usuario",
@@ -13,6 +18,10 @@
     "success": "Inicio de sesión exitoso.",
     "errorTitle": "Error de autenticación",
     "successTitle": "Bienvenido"
+  },
+  "logout": {
+    "title": "Cerrando sesión...",
+    "message": "Redirigiéndote a la página principal"
   },
   "common": {
     "close": "Cerrar"
