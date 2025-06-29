@@ -1,18 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { MenuItem } from '../types/MenuItem';
 
 interface MegaMenuItemProps {
     item: MenuItem;
+    parentRef: React.RefObject<HTMLElement | null>;
 }
 
-const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item }) => {
+const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
     const [open, setOpen] = useState(false);
     const [isMobileScreen, setIsMobileScreen] = useState(window.innerWidth <= 768);
+    const itemRef = useRef<HTMLLIElement>(null);
     const { t } = useTranslation();
 
     const hasChildren = item.children && item.children.length > 0;
+
+    // Cierra al hacer clic fuera del MegaMenuItem
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node;
+
+            if (
+                itemRef.current &&
+                !itemRef.current.contains(target) &&
+                parentRef.current &&
+                parentRef.current.contains(target)
+            ) {
+                setOpen(false); // clic dentro del navbar, pero fuera del megaMenuItem
+            }
+
+            if (
+                parentRef.current &&
+                !parentRef.current.contains(target)
+            ) {
+                setOpen(false); // clic completamente fuera del navbar
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [parentRef]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,14 +60,14 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item }) => {
     };
 
     return (
-        <li className="mega-menu-item">
+        <li className="mega-menu-item" ref={itemRef}>
             <div className="menu-title-container">
                 {item.path ? (
                     <NavLink
                         to={item.path}
                         className="menu-title clickable"
                         title={item.title ? t(item.title) : undefined}
-                        onClick={() => isMobileScreen && setOpen(false)}
+                        onClick={() => setOpen(false)}
                     >
                         {t(item.label)}
                     </NavLink>
@@ -70,7 +98,7 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item }) => {
                                             <NavLink
                                                 to={child.path}
                                                 title={child.title ? t(child.title) : undefined}
-                                                onClick={() => isMobileScreen && setOpen(false)}
+                                                onClick={() => setOpen(false)}
                                             >
                                                 {t(child.label)}
                                             </NavLink>

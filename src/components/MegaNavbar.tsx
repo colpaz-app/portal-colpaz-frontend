@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import menuItems from '../config/menuItem';
 import MegaMenuItem from './MegaMenuItem';
 import type { MenuItem } from '../types/MenuItem';
@@ -7,6 +7,7 @@ import '../assets/styles/MegaMenu.css';
 const MegaNavbar: React.FC = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const navbarRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -18,7 +19,7 @@ const MegaNavbar: React.FC = () => {
     );
 
     return (
-        <nav className="mega-navbar">
+        <nav className="mega-navbar" ref={navbarRef}>
             <button
                 className="mega-navbar-toggle"
                 onClick={() => setMenuOpen(prev => !prev)}
@@ -28,7 +29,7 @@ const MegaNavbar: React.FC = () => {
             </button>
             <ul className={`mega-menu-list ${menuOpen ? 'open' : ''}`}>
                 {filteredItems.map((item, index) => (
-                    <MegaMenuItem key={index} item={item} />
+                    <MegaMenuItem key={index} item={item} parentRef={navbarRef} />
                 ))}
             </ul>
         </nav>
