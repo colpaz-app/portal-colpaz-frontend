@@ -16,21 +16,31 @@ const Login = () => {
             <div className="login-form-section">
                 <img
                     src={images.logoPNG}
-                    alt="Logo Colpaz"
+                    alt={t('header.logoAlt')}
                     className="login-form-logo responsive-only"
                 />
 
                 <h2 className="login-title mb-4">{t('login.title')}</h2>
                 <form className="login-form">
-                    <label htmlFor="email">Correo electrónico</label>
-                    <input type="email" id="email" placeholder="Ingresar correo eléctronico" required />
+                    <label htmlFor="email">{t('login.email')}</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder={t('login.emailPlaceholder')}
+                        required
+                    />
 
-                    <label htmlFor="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Ingresar contraseña" required />
+                    <label htmlFor="password">{t('login.password')}</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder={t('login.passwordPlaceholder')}
+                        required
+                    />
 
                     <div className="section-button">
                         <Button variant="primary" type="submit">
-                            Ingresar
+                            {t('login.submit')}
                         </Button>
                     </div>
                 </form>

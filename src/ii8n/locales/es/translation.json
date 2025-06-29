@@ -2,7 +2,22 @@
   "login": {
     "title": "Iniciar Sesión",
     "email": "Correo electrónico",
+    "emailPlaceholder": "Ingresar correo electrónico",
     "password": "Contraseña",
+    "passwordPlaceholder": "Ingresar contraseña",
     "submit": "Ingresar"
+  },
+  "header": {
+    "logoAlt": "Logo Colpaz",
+    "languageSelector": "Seleccionar idioma"
+  },
+  "accessibility": {
+    "increaseFont": "Aumentar fuente",
+    "decreaseFont": "Reducir fuente",
+    "highContrast": "Contraste alto",
+    "reset": "Restablecer ajustes",
+    "secretary": "Secretaría de Educación de Boyacá",
+    "relayCenter": "Centro de Relevo",
+    "openMenu": "Abrir menú de accesibilidad"
   }
 }

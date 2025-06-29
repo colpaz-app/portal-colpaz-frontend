@@ -2,7 +2,22 @@
   "login": {
     "title": "Login",
     "email": "Email",
+    "emailPlaceholder": "Enter your email",
     "password": "Password",
+    "passwordPlaceholder": "Enter your password",
     "submit": "Login"
+  },
+   "header": {
+    "logoAlt": "Colpaz Logo",
+    "languageSelector": "Select language"
+  },
+  "accessibility": {
+    "increaseFont": "Increase font size",
+    "decreaseFont": "Decrease font size",
+    "highContrast": "High contrast",
+    "reset": "Reset settings",
+    "secretary": "Boyacá Education Secretariat",
+    "relayCenter": "Relay Center",
+    "openMenu": "Open accessibility menu"
   }
 }

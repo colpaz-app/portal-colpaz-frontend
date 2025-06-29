@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import '../../assets/styles/Accessibility.css';
+import { useTranslation } from 'react-i18next';
 
 const Accessibility = () => {
   const [fontSize, setFontSize] = useState(100);
   const [darkMode, setDarkMode] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontSize}%`;
@@ -26,23 +29,23 @@ const Accessibility = () => {
   return (
     <div className="accessibility-container">
       <div className={`accessibility-panel ${showPanel ? 'open' : ''}`}>
-        <button onClick={increaseFont} title="Aumentar fuente">
+        <button onClick={increaseFont} title={t('accessibility.increaseFont')}>
           <i className="fas fa-plus"></i>
         </button>
-        <button onClick={decreaseFont} title="Reducir fuente">
+        <button onClick={decreaseFont} title={t('accessibility.decreaseFont')}>
           <i className="fas fa-minus"></i>
         </button>
-        <button onClick={toggleContrast} title="Contraste alto">
+        <button onClick={toggleContrast} title={t('accessibility.highContrast')}>
           <i className="fas fa-adjust"></i>
         </button>
-        <button onClick={resetAccessibility} title="Restablecer ajustes">
+        <button onClick={resetAccessibility} title={t('accessibility.reset')}>
           <i className="fas fa-sync-alt"></i>
         </button>
         <a
           href="http://sedboyaca.gov.co/"
           target="_blank"
           rel="noopener noreferrer"
-          title="Secretaría de Educación de Boyacá"
+          title={t('accessibility.secretary')}
         >
           <i className="fas fa-university"></i>
         </a>
@@ -50,7 +53,7 @@ const Accessibility = () => {
           href="https://www.centroderelevo.gov.co/"
           target="_blank"
           rel="noopener noreferrer"
-          title="Centro de Relevo"
+          title={t('accessibility.relayCenter')}
         >
           <i className="fas fa-sign-language"></i>
         </a>
@@ -59,7 +62,7 @@ const Accessibility = () => {
       <button
         className="accessibility-toggle"
         onClick={togglePanel}
-        aria-label="Abrir menú de accesibilidad"
+        aria-label={t('accessibility.openMenu')}
       >
         <i className="fas fa-universal-access"></i>
       </button>
