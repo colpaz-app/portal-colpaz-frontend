@@ -1,7 +1,6 @@
 .main-navbar {
   background-color: var(--primary-light-gray);
   padding: 1.2rem 2rem;
-  font-family: var(--font-family-base);
   display: flex;
   justify-content: center;
   position: relative;

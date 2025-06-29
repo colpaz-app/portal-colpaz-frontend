@@ -3,7 +3,6 @@
   font-weight: var(--font-weight-bold);
   position: relative;
   margin: 0px;
-  font-family: var(--font-family-base);
 }
 
 .heading-underline {

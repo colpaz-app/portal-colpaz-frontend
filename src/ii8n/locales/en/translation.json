@@ -1,11 +1,21 @@
 {
   "login": {
     "title": "Login",
-    "email": "Email",
-    "emailPlaceholder": "Enter your email",
+    "username": "Username",
+    "usernamePlaceholder": "Enter your username",
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
-    "submit": "Login"
+    "submit": "Login",
+    "loading": "Loading...",
+    "invalidCredentials": "Invalid username or password.",
+    "unauthorized": "You are not authorized to access.",
+    "serverError": "Internal server error.",
+    "success": "Login successful.",
+    "errorTitle": "Authentication Error",
+    "successTitle": "Welcome"
+  },
+  "common": {
+    "close": "Close"
   },
   "header": {
     "logoAlt": "Colpaz Logo",

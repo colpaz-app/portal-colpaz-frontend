@@ -1,11 +1,21 @@
 {
   "login": {
-    "title": "Iniciar Sesión",
-    "email": "Correo electrónico",
-    "emailPlaceholder": "Ingresar correo electrónico",
+    "title": "Iniciar sesión",
+    "username": "Nombre de usuario",
+    "usernamePlaceholder": "Ingresa tu usuario",
     "password": "Contraseña",
-    "passwordPlaceholder": "Ingresar contraseña",
-    "submit": "Ingresar"
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "submit": "Entrar",
+    "loading": "Cargando...",
+    "invalidCredentials": "Usuario o contraseña inválidos.",
+    "unauthorized": "No tienes permiso para acceder.",
+    "serverError": "Error interno del servidor.",
+    "success": "Inicio de sesión exitoso.",
+    "errorTitle": "Error de autenticación",
+    "successTitle": "Bienvenido"
+  },
+  "common": {
+    "close": "Cerrar"
   },
   "header": {
     "logoAlt": "Logo Colpaz",

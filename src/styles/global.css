@@ -151,6 +151,7 @@
   --btn-active-fg: var(--primary-white);
 
   --btn-primary-hover-bg: #f4bf00;
+  --btn-primary-hover-fg: var(--primary-black); 
   --btn-primary-active-bg: #e0ac00;
 
   --btn-secondary-hover-bg: #2f37a0;
