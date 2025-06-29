@@ -3,6 +3,7 @@ import '../assets/styles/MainLayout.css';
 import Accessibility from '../components/Accessibility';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const MainLayout = () => {
     return (
@@ -13,10 +14,7 @@ const MainLayout = () => {
             <main className="layout-main">
                 <Outlet />
             </main>
-
-            <footer className="layout-footer">
-                <p>© 2025 Colpaz</p>
-            </footer>
+            <Footer />
         </div>
     )
 }

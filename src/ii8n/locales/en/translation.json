@@ -7,7 +7,7 @@
     "passwordPlaceholder": "Enter your password",
     "submit": "Login"
   },
-   "header": {
+  "header": {
     "logoAlt": "Colpaz Logo",
     "languageSelector": "Select language"
   },
@@ -19,5 +19,18 @@
     "secretary": "Boyacá Education Secretariat",
     "relayCenter": "Relay Center",
     "openMenu": "Open accessibility menu"
+  },
+  "footer": {
+    "about": "Additional Information",
+    "contact": "Contact",
+    "sitemap": "Sitemap",
+    "developer": "Developer",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "rightsReserved": "All rights reserved.",
+    "secretary": "Department of Education of Boyacá",
+    "educationMinistry": "National Ministry of Education",
+    "laborMinistry": "Ministry of Labor"
   }
 }

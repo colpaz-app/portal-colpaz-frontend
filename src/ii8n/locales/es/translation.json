@@ -19,5 +19,18 @@
     "secretary": "Secretaría de Educación de Boyacá",
     "relayCenter": "Centro de Relevo",
     "openMenu": "Abrir menú de accesibilidad"
+  },
+  "footer": {
+    "about": "Información adicional",
+    "contact": "Contacto",
+    "sitemap": "Mapa del sitio",
+    "developer": "Desarrollador",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "address": "Dirección",
+    "rightsReserved": "Todos los derechos reservados.",
+    "secretary": "Secretaría de Educación de Boyacá",
+    "educationMinistry": "Ministerio de Educación Nacional",
+    "laborMinistry": "Ministerio de Trabajo"
   }
 }

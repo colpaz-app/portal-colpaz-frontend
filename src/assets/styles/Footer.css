@@ -1,0 +1,113 @@
+.footer {
+  background-color: var(--primary-light-gray);
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+  position: relative;
+  margin-top: 4rem;
+}
+
+/* Línea azul */
+.footer-line {
+  height: 5px;
+  background-color: var(--primary-blue);
+  width: 100%;
+}
+
+/* Fondo general del footer */
+.footer-background {
+  background-color: var(--primary-white);
+  padding: 3rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cuadro blanco con info */
+.footer-box {
+  background-color: var(--primary-white);
+  border: 1px solid var(--border-footer);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.footer-section {
+  flex: 1 1 45%;
+  min-width: 240px;
+}
+
+.footer-section h4 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 0.25rem 0;
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Línea inferior con logo y derechos */
+.footer-bottom {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-logo img {
+  height: var(--logo-height-small);
+}
+
+.footer-logo span {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-copy {
+  font-size: var(--font-size-small);
+  text-align: center;
+  flex: 1 1 100%;
+}
+
+/* Dark mode */
+.dark-mode .footer-background {
+  background-color: var(--accent-bg);
+}
+
+.dark-mode .footer-box {
+  background-color: var(--accent-2-bg);
+  color: var(--primary-white);
+}
+
+.dark-mode .footer-section h4,
+.dark-mode .footer-section p,
+.dark-mode .footer-section a {
+  color: var(--primary-white);
+}
+
+.dark-mode .footer-bottom {
+  background-color: var(--accent-bg);
+  color: var(--accent-fg);
+}
