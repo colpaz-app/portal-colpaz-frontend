@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import '../assets/styles/MainLayout.css';
-import Accessibility from '../components/Accessibility/Accessibility';
-import Header from '../components/Header/Header';
-import Navbar from '../components/Navbar/Navbar';
+import Accessibility from '../components/Accessibility';
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 
 const MainLayout = () => {
     return (

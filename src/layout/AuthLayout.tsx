@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Accessibility from '../components/Accessibility/Accessibility';
+import Accessibility from '../components/Accessibility';
 
 const AuthLayout = () => {
     return (

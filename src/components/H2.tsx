@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import '../../assets/styles/H2.css';
+import '../assets/styles/H2.css';
 
 interface H2Props {
   children: ReactNode;

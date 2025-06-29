@@ -1,4 +1,4 @@
-import Button from "../components/Button/Button"
+import Button from '../components/Button';
 import '../assets/styles/Login.css';
 import { images } from "../assets/images";
 import { useTranslation } from 'react-i18next';

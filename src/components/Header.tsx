@@ -1,5 +1,5 @@
-import '../../assets/styles/Header.css';
-import logo from '../../assets/images/Logo.png';
+import '../assets/styles/Header.css';
+import logo from '../assets/images/Logo.png';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {

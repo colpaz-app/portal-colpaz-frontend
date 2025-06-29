@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../../assets/styles/Accessibility.css';
+import '../assets/styles/Accessibility.css';
 import { useTranslation } from 'react-i18next';
-import { useAccessibility } from '../../hooks/useAccessibility';
+import { useAccessibility } from '../hooks/useAccessibility';
 
 const Accessibility = () => {
   const { t } = useTranslation();
