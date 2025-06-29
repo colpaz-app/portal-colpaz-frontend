@@ -46,7 +46,7 @@
 .accessibility-toggle {
   display: none;
   position: fixed;
-  bottom: 1.5rem;
+  bottom: -13.5rem;
   right: 0rem;
   background-color: var(--primary-blue);
   color: var(--primary-white);
@@ -63,7 +63,7 @@
   .accessibility-panel {
     display: none;
     position: fixed;
-    bottom: 5rem;
+    bottom: -10rem;
     right: 0rem;
   }
 
