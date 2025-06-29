@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import Logout from '../pages/Logout';
 import AdminEntry from '../pages/AdminEntry';
 import AdminEntryLayout from '../layout/AdminEntryLayout';
+import SiteMap from '../pages/Sitemap';
 
 const IndexRouter = () => {
   return (
@@ -13,6 +14,7 @@ const IndexRouter = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/sitemap" element={<SiteMap />} />
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />

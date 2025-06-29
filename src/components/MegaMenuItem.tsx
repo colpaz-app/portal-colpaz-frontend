@@ -16,7 +16,6 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
 
     const hasChildren = item.children && item.children.length > 0;
 
-    // Cierra al hacer clic fuera del MegaMenuItem
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
@@ -27,14 +26,14 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
                 parentRef.current &&
                 parentRef.current.contains(target)
             ) {
-                setOpen(false); // clic dentro del navbar, pero fuera del megaMenuItem
+                setOpen(false);
             }
 
             if (
                 parentRef.current &&
                 !parentRef.current.contains(target)
             ) {
-                setOpen(false); // clic completamente fuera del navbar
+                setOpen(false);
             }
         };
 

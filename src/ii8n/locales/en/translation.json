@@ -22,6 +22,9 @@
       "title": "Go to Logout"
     }
   },
+  "siteMap": {
+    "title": "Site Map"
+  },
   "adminEntry": {
     "imageAlt": "Welcome visual image",
     "welcomeTitle": "Welcome",

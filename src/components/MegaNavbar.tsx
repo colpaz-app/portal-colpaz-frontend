@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import menuItems from '../config/menuItem';
 import MegaMenuItem from './MegaMenuItem';
-import type { MenuItem } from '../types/MenuItem';
 import '../assets/styles/MegaMenu.css';
+import { filterVisibleItems } from '../utils/menuUtils';
 
 const MegaNavbar: React.FC = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -14,9 +14,10 @@ const MegaNavbar: React.FC = () => {
         setIsAuthenticated(!!token);
     }, []);
 
-    const filteredItems: MenuItem[] = menuItems.filter(
-        item => !item.protected || isAuthenticated
-    );
+    const filteredItems = filterVisibleItems(menuItems, {
+        context: 'menu',
+        isAuthenticated
+    });
 
     return (
         <nav className="mega-navbar" ref={navbarRef}>

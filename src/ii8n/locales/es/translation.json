@@ -22,6 +22,9 @@
       "title": "Ir a Cerrar sesión"
     }
   },
+  "siteMap": {
+    "title": "Mapa del Sitio"
+  },
   "adminEntry": {
     "imageAlt": "Imagen visual de bienvenida",
     "welcomeTitle": "Bienvenido",

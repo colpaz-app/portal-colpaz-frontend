@@ -1,0 +1,17 @@
+.site-map ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.site-map li {
+  margin-bottom: 0.5rem;
+}
+
+.site-map a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.site-map a:hover {
+  text-decoration: underline;
+}
