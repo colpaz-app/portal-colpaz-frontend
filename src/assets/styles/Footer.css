@@ -66,6 +66,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  border-top: 2px solid var(--primary-blue);
 }
 
 .footer-logo {
@@ -99,6 +100,10 @@
   color: var(--primary-white);
 }
 
+.dark-mode .footer-line {
+  background-color: var(--primary-yellow);
+}
+
 .dark-mode .footer-section h4,
 .dark-mode .footer-section p,
 .dark-mode .footer-section a {
@@ -108,4 +113,5 @@
 .dark-mode .footer-bottom {
   background-color: var(--accent-bg);
   color: var(--accent-fg);
+  border-top: 2px solid var(--primary-yellow);
 }
