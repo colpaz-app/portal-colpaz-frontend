@@ -9,7 +9,10 @@
   },
   "header": {
     "logoAlt": "Colpaz Logo",
-    "languageSelector": "Select language"
+    "languageSelector": "Select language",
+    "socials": "Social media",
+    "facebook": "Facebook",
+    "twitter": "Twitter"
   },
   "accessibility": {
     "increaseFont": "Increase font size",
