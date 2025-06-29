@@ -1,29 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import '../../assets/styles/Accessibility.css';
 import { useTranslation } from 'react-i18next';
+import { useAccessibility } from '../../hooks/useAccessibility';
 
 const Accessibility = () => {
-  const [fontSize, setFontSize] = useState(100);
-  const [darkMode, setDarkMode] = useState(false);
-  const [showPanel, setShowPanel] = useState(false);
-
   const { t } = useTranslation();
+  const {
+    increaseFont,
+    decreaseFont,
+    toggleContrast,
+    resetAccessibility,
+  } = useAccessibility();
 
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}%`;
-  }, [fontSize]);
-
-  useEffect(() => {
-    document.body.classList.toggle('dark-mode', darkMode);
-  }, [darkMode]);
-
-  const increaseFont = () => setFontSize(prev => Math.min(prev + 10, 150));
-  const decreaseFont = () => setFontSize(prev => Math.max(prev - 10, 80));
-  const toggleContrast = () => setDarkMode(prev => !prev);
-  const resetAccessibility = () => {
-    setFontSize(100);
-    setDarkMode(false);
-  };
+  const [showPanel, setShowPanel] = useState(false);
   const togglePanel = () => setShowPanel(prev => !prev);
 
   return (
