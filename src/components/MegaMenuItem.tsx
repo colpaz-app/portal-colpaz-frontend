@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { MenuItem } from '../types/MenuItem';
+import RecursiveDropdownItem from './RecursiveDropdownItem';
 
 interface MegaMenuItemProps {
     item: MenuItem;
@@ -19,7 +20,6 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
-
             if (
                 itemRef.current &&
                 !itemRef.current.contains(target) &&
@@ -29,10 +29,7 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
                 setOpen(false);
             }
 
-            if (
-                parentRef.current &&
-                !parentRef.current.contains(target)
-            ) {
+            if (parentRef.current && !parentRef.current.contains(target)) {
                 setOpen(false);
             }
         };
@@ -88,20 +85,10 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({ item, parentRef }) => {
                     <div className="mega-dropdown-inner">
                         {item.children!.map((section, i) => (
                             <div key={i} className="dropdown-section">
-                                {section.title && (
-                                    <h4 className="section-title">{t(section.title)}</h4>
-                                )}
+                                {section.title && <h4 className="section-title">{t(section.title)}</h4>}
                                 <ul>
                                     {section.items.map((child, j) => (
-                                        <li key={j}>
-                                            <NavLink
-                                                to={child.path}
-                                                title={child.title ? t(child.title) : undefined}
-                                                onClick={() => setOpen(false)}
-                                            >
-                                                {t(child.label)}
-                                            </NavLink>
-                                        </li>
+                                        <RecursiveDropdownItem key={j} item={child} t={t} setOpen={setOpen} />
                                     ))}
                                 </ul>
                             </div>

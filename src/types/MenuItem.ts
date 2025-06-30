@@ -1,3 +1,19 @@
+// src/types/MenuItem.ts
+
+export interface MenuChildItem {
+  label: string;
+  path?: string;
+  title?: string;
+  isVisible?: boolean;
+  isVisibleSitemap?: boolean;
+  children?: MenuChildItem[];
+}
+
+export interface MenuSection {
+  title?: string;
+  items: MenuChildItem[];
+}
+
 export interface MenuItem {
   label: string;
   path?: string;
@@ -5,14 +21,5 @@ export interface MenuItem {
   protected?: boolean;
   isVisible?: boolean;
   isVisibleSitemap?: boolean;
-  children?: {
-    title?: string;
-    items: {
-      label: string;
-      path: string;
-      title?: string;
-      isVisible?: boolean;
-      isVisibleSitemap?: boolean;
-    }[];
-  }[];
+  children?: MenuSection[];
 }

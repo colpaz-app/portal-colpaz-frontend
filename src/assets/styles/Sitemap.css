@@ -1,6 +1,14 @@
+.site-map {
+  color: var(--text-color);
+  line-height: var(--line-height-base);
+  padding: 0;
+  margin: 0;
+}
+
 .site-map ul {
-  list-style-type: none;
-  padding-left: 1rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .site-map li {
@@ -9,9 +17,47 @@
 
 .site-map a {
   text-decoration: none;
-  color: #0066cc;
+  color: var(--primary-black);
+  font-weight: var(--font-weight-regular);
 }
 
 .site-map a:hover {
   text-decoration: underline;
+}
+
+.site-map .no-link {
+  display: inline-block;
+  border-bottom: 2px solid var(--primary-blue);
+  color: var(--primary-black);
+  font-weight: var(--font-weight-semibold);
+  cursor: default;
+}
+
+.site-map .toggle-icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: var(--secondary-gray);
+  transition: transform 0.2s ease;
+}
+
+.site-map .dropdown {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.site-map strong {
+  display: block;
+  margin: 0.25rem 0;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small);
+  color: var(--primary-black);
+}
+
+.dark-mode .site-map .no-link,
+.dark-mode .site-map a {
+    color: var(--primary-white);
+}
+
+.dark-mode .site-map strong {
+    color: var(--primary-yellow);
 }
