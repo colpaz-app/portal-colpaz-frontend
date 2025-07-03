@@ -147,7 +147,6 @@
   cursor: pointer;
   position: absolute;
   top: 0rem;
-  right: 16rem;
   z-index: 1002;
 }
 
@@ -164,6 +163,10 @@
 @media (max-width: 768px) {
   .mega-navbar-toggle {
     display: block;
+  }
+
+  .mega-navbar{
+    justify-content: left;
   }
 
   .mega-menu-list {

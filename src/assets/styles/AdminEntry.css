@@ -11,6 +11,12 @@
   justify-content: center;
 }
 
+.admin-entry-logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .admin-entry-title, 
 .section-button {
     text-align: center;

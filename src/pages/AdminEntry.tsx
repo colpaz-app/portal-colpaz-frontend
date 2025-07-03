@@ -20,11 +20,13 @@ const AdminEntry = () => {
       </div>
 
       <div className="admin-entry-section">
-        <img
-          src={images.logoPNG}
-          alt={t('header.logoAlt')}
-          className="admin-entry-logo responsive-only"
-        />
+        <div className="admin-entry-logo-container">
+          <img
+            src={images.logoPNG}
+            alt={t('header.logoAlt')}
+            className="admin-entry-logo responsive-only"
+          />
+        </div>
 
         <H2>{t('adminEntry.welcomeTitle')}</H2>
 
@@ -33,7 +35,7 @@ const AdminEntry = () => {
         </p>
 
         <div className="button-container">
-          <Button onClick={handleEnter} className="mt-4">
+          <Button title={t('adminEntry.goEnterButton')} onClick={handleEnter} className="mt-4">
             {t('adminEntry.enterButton')}
           </Button>
         </div>

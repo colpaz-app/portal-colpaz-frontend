@@ -34,7 +34,8 @@
     "imageAlt": "Imagen visual de bienvenida",
     "welcomeTitle": "Bienvenido",
     "welcomeMessage": "Has accedido correctamente a la plataforma. Desde aquí podrás gestionar usuarios, revisar estadísticas, configurar parámetros y administrar todas las funcionalidades clave del sistema. Tómate un momento para explorar las herramientas disponibles y asegurarte de que todo esté en orden antes de continuar.",
-    "enterButton": "Administración"
+    "enterButton": "Administración",
+    "goEnterButton": "Ir a Administración"
   },
   "login": {
     "title": "Iniciar sesión",
