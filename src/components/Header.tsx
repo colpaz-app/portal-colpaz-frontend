@@ -59,7 +59,7 @@ const Header = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={t('header.facebook')}
-                        title={t('header.facebook')}
+                        title={t('header.goFacebook')}
                         className="header-social-item"
                     >
                         <i className="fab fa-facebook-f" aria-hidden="true"></i>
@@ -69,7 +69,7 @@ const Header = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={t('header.twitter')}
-                        title={t('header.twitter')}
+                        title={t('header.goTwitter')}
                         className="header-social-item"
                     >
                         <i className="fab fa-twitter" aria-hidden="true"></i>
@@ -77,7 +77,7 @@ const Header = () => {
                     <Link
                         to="/sitemap"
                         aria-label={t('footer.sitemap')}
-                        title={t('footer.sitemap')}
+                        title={t('header.goSiteMap')}
                         className="header-social-item"
                     >
                         <i className="fas fa-sitemap" aria-hidden="true"></i>

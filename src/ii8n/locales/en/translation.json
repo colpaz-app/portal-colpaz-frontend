@@ -43,6 +43,7 @@
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
     "submit": "Login",
+    "goSubmit": "Go to Login",
     "loading": "Loading...",
     "invalidCredentials": "Invalid username or password.",
     "unauthorized": "You are not authorized to access.",
@@ -63,7 +64,11 @@
     "languageSelector": "Select language",
     "socials": "Social media",
     "facebook": "Facebook",
-    "twitter": "Twitter"
+    "twitter": "Twitter",
+    "siteMap": "Site Map",
+    "goTwitter": "Go to Twitter",
+    "goFacebook": "Go to Facebook",
+    "goSiteMap": "Go to Site Map"
   },
   "accessibility": {
     "increaseFont": "Increase font size",
@@ -77,14 +82,19 @@
   "footer": {
     "about": "Additional Information",
     "contact": "Contact",
+    "goSiteMap": "Go to Site Map",
     "sitemap": "Sitemap",
     "developer": "Developer",
     "phone": "Phone",
     "email": "Email",
+    "goEmail": "Go to email",
     "address": "Address",
     "rightsReserved": "All rights reserved.",
+    "goSecretary": "Go to the Boyacá Education Secretariat",
     "secretary": "Department of Education of Boyacá",
+    "goEducationMinistry": "Go to the National Ministry of Education",
     "educationMinistry": "National Ministry of Education",
+    "goLaborMinistry": "Go to the Ministry of Labor",
     "laborMinistry": "Ministry of Labor"
   }
 }

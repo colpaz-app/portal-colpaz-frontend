@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
   variant?: 'primary' | 'secondary' | 'danger' | 'outline' | 'link' | 'light' | 'success' | 'warning' | 'info';
   disabled?: boolean;
+  title?: string;
 }
 
 const Button = ({
@@ -16,11 +17,13 @@ const Button = ({
   onClick,
   className = '',
   variant = 'primary',
-  disabled = false
+  disabled = false,
+  title = '',
 }: ButtonProps) => {
   return (
     <button
       type={type}
+      title={title}
       onClick={onClick}
       disabled={disabled}
       className={`custom-button btn-${variant} ${className}`}

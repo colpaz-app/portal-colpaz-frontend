@@ -94,7 +94,7 @@ const Login = () => {
                         />
 
                         <div className="section-button">
-                            <Button variant="primary" type="submit" disabled={loading}>
+                            <Button title={t('login.goSubmit')} variant="primary" type="submit" disabled={loading}>
                                 {loading ? t('login.loading') : t('login.submit')}
                             </Button>
                         </div>

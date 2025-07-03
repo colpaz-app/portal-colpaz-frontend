@@ -44,7 +44,7 @@
   background-color: transparent;
   border: 2px solid var(--primary-white);
   color: var(--primary-white);
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin-left: 1rem;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -77,7 +77,7 @@
   border-radius: 6px;
   width: 36px;
   height: 36px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }

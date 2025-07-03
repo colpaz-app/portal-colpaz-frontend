@@ -14,7 +14,7 @@ const NotFoundPage = () => {
         <h1>404</h1>
         <h2>{t('notFound.title')}</h2>
         <p>{t('notFound.description')}</p>
-        <Link to="/">
+        <Link to="/" title={t('notFound.goHome')}>
           <Button>{t('notFound.goHome')}</Button>
         </Link>
       </div>

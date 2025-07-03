@@ -43,6 +43,7 @@
     "password": "Contraseña",
     "passwordPlaceholder": "Ingresa tu contraseña",
     "submit": "Entrar",
+    "goSubmit": "Ir a Entrar",
     "loading": "Cargando...",
     "invalidCredentials": "Usuario o contraseña inválidos.",
     "unauthorized": "No tienes permiso para acceder.",
@@ -63,7 +64,11 @@
     "languageSelector": "Seleccionar idioma",
     "socials": "Redes sociales",
     "facebook": "Facebook",
-    "twitter": "Twitter"
+    "twitter": "Twitter",
+    "siteMap": "Mapa del Sitio",
+    "goTwitter": "Ir a Twitter",
+    "goFacebook": "Ir a Facebook",
+    "goSiteMap": "Ir al Mapa del Sitio"
   },
   "accessibility": {
     "increaseFont": "Aumentar fuente",
@@ -77,14 +82,19 @@
   "footer": {
     "about": "Información adicional",
     "contact": "Contacto",
+    "goSiteMap": "Ir al Mapa del Sitio",
     "sitemap": "Mapa del sitio",
     "developer": "Desarrollador",
     "phone": "Teléfono",
+    "goEmail": "Ir al correo electrónico",
     "email": "Correo",
     "address": "Dirección",
     "rightsReserved": "Todos los derechos reservados.",
+    "goSecretary": "Ir a la Secretaría de Educación de Boyacá",
     "secretary": "Secretaría de Educación de Boyacá",
+    "goEducationMinistry": "Ir al Ministerio de Educación Nacional",
     "educationMinistry": "Ministerio de Educación Nacional",
+    "goLaborMinistry": "Ir al Ministerio de Trabajo",
     "laborMinistry": "Ministerio de Trabajo"
   }
 }

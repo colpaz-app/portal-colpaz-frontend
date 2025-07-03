@@ -15,22 +15,22 @@ const Footer = () => {
           <div className="footer-section">
             <h4>{t('footer.about')}</h4>
             <p>
-              <a href="https://sedboyaca.gov.co/" target="_blank" rel="noopener noreferrer">
+              <a href="https://sedboyaca.gov.co/" title={t('footer.goSecretary')} target="_blank" rel="noopener noreferrer">
                 {t('footer.secretary')}
               </a>
             </p>
             <p>
-              <a href="https://www.mineducacion.gov.co/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.mineducacion.gov.co/" title={t('footer.goEducationMinistry')} target="_blank" rel="noopener noreferrer">
                 {t('footer.educationMinistry')}
               </a>
             </p>
             <p>
-              <a href="https://www.mintrabajo.gov.co/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.mintrabajo.gov.co/" title={t('footer.goLaborMinistry')} target="_blank" rel="noopener noreferrer">
                 {t('footer.laborMinistry')}
               </a>
             </p>
             <p>
-              <Link to="/sitemap">{t('footer.sitemap')}</Link>
+              <Link title={t('footer.goSiteMap')} to="/sitemap">{t('footer.sitemap')}</Link>
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             </p>
             <p>
               <strong>{t('footer.email')}:</strong>{' '}
-              <a href="mailto:ticolpaz@gmail.com">
+              <a title={t('footer.goEmail')} href="mailto:ticolpaz@gmail.com">
                 ticolpaz@gmail.com
               </a>
             </p>

@@ -14,12 +14,12 @@
 }
 
 .not-found-content h1 {
-  font-size: 4rem;
+  font-size: var(--font-size-h1);
   margin-bottom: 1rem;
 }
 
 .not-found-content p {
-  font-size: 1.25rem;
+  font-size: var(--font-size-large);
   margin-bottom: 2rem;
   max-width: 400px;
 }
@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 600px) {
-  .not-found-content h1 {
-    font-size: 3rem;
-  }
-
   .not-found-logo {
     width: 60px;
   }
