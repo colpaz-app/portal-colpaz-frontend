@@ -8,6 +8,7 @@ import AdminEntry from '../pages/AdminEntry';
 import AdminEntryLayout from '../layout/AdminEntryLayout';
 import SiteMap from '../pages/Sitemap';
 import NotFoundPage from '../pages/NotFoundPage';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 const IndexRouter = () => {
   return (
@@ -16,13 +17,21 @@ const IndexRouter = () => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/sitemap" element={<SiteMap />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/not-found" element={<NotFoundPage />} />
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/logout" element={
+            <ProtectedRoute>
+              <Logout />
+            </ProtectedRoute>
+          }/>
         </Route>
-        <Route element={<AdminEntryLayout />}>
+        <Route element={
+          <ProtectedRoute>
+            <AdminEntryLayout />
+          </ProtectedRoute>
+        }>
           <Route path="/admin-entry" element={<AdminEntry />} />
         </Route>
       </Routes>
