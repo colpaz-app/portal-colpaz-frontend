@@ -7,6 +7,7 @@ import Logout from '../pages/Logout';
 import AdminEntry from '../pages/AdminEntry';
 import AdminEntryLayout from '../layout/AdminEntryLayout';
 import SiteMap from '../pages/Sitemap';
+import NotFoundPage from '../pages/NotFoundPage';
 
 const IndexRouter = () => {
   return (
@@ -15,6 +16,7 @@ const IndexRouter = () => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/sitemap" element={<SiteMap />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />

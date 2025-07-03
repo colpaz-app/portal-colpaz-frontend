@@ -22,6 +22,11 @@
       "title": "Go to Logout"
     }
   },
+  "notFound": {
+    "title": "Oops! Page not found",
+    "description": "The page you're looking for doesn't exist, was moved, or never existed.",
+    "goHome": "Go back to the homepage"
+  },
   "siteMap": {
     "title": "Site Map"
   },

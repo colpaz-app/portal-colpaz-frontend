@@ -27,29 +27,30 @@ const Login = () => {
     const [modalMessage, setModalMessage] = useState('');
     const [modalType, setModalType] = useState<'success' | 'error' | 'warning' | 'info'>('info');
 
-    const { data, error, loading, sendRequest } = useHttp<AuthResponse>('/auth/login', {
+    const { error, loading, sendRequest } = useHttp<AuthResponse>('/auth/login', {
         method: 'POST',
         body: { username, password },
     });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        await sendRequest();
 
-        if (data) {
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('user', JSON.stringify(data.user));
+        const result = await sendRequest();
+
+        if (result) {
+            localStorage.setItem('token', result.token);
+            localStorage.setItem('user', JSON.stringify(result.user));
             setModalType('success');
             setModalMessage(t('login.success'));
             setShowModal(true);
             navigate('/');
-        } else if (error) {
+        } else {
             setModalType('error');
             setModalMessage(
-                error.includes('401') ? t('login.invalidCredentials') :
-                    error.includes('403') ? t('login.unauthorized') :
-                        error.includes('500') ? t('login.serverError') :
-                            error
+                error?.includes('401') ? t('login.invalidCredentials') :
+                    error?.includes('403') ? t('login.unauthorized') :
+                        error?.includes('500') ? t('login.serverError') :
+                            error || t('login.errorGeneric')
             );
             setShowModal(true);
         }

@@ -13,7 +13,7 @@
 
 /* Fondo general del footer */
 .footer-background {
-  background-color: var(--primary-white);
+  background-color: var(--primary-light-gray);
   padding: 3rem 2rem 2rem 2rem;
   display: flex;
   justify-content: center;

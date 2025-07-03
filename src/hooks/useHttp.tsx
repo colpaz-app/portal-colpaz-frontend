@@ -12,7 +12,7 @@ interface HttpResponse<T> {
     data: T | null;
     loading: boolean;
     error: string | null;
-    sendRequest: () => Promise<void>;
+    sendRequest: () => Promise<T | null>;
 }
 
 export function useHttp<T = unknown>(
@@ -23,7 +23,7 @@ export function useHttp<T = unknown>(
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const sendRequest = async () => {
+    const sendRequest = async (): Promise<T | null> => {
         setLoading(true);
         setError(null);
         setData(null);
@@ -50,17 +50,18 @@ export function useHttp<T = unknown>(
             }
 
             setData(result);
+            return result;
         } catch (err: unknown) {
             if (err instanceof Error) {
                 setError(err.message);
             } else {
                 setError('Unknown error');
             }
+            return null;
         } finally {
             setLoading(false);
         }
     };
-
 
     return { data, loading, error, sendRequest };
 }

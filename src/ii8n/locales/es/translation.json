@@ -22,6 +22,11 @@
       "title": "Ir a Cerrar sesión"
     }
   },
+  "notFound": {
+    "title": "¡Ups! Página no encontrada",
+    "description": "La página que buscas no existe, fue movida o nunca existió.",
+    "goHome": "Volver al inicio"
+  },
   "siteMap": {
     "title": "Mapa del Sitio"
   },
