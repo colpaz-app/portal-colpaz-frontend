@@ -52,7 +52,9 @@ export function useHttp<T = unknown>(
             setData(result);
             return result;
         } catch (err: unknown) {
-            if (err instanceof Error) {
+            if (err instanceof TypeError && err.message.includes('NetworkError')) {
+                setError('NETWORK_ERROR');
+            } else if (err instanceof Error) {
                 setError(err.message);
             } else {
                 setError('Unknown error');

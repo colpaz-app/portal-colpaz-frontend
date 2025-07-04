@@ -47,10 +47,11 @@ const Login = () => {
         } else {
             setModalType('error');
             setModalMessage(
-                error?.includes('401') ? t('login.invalidCredentials') :
-                    error?.includes('403') ? t('login.unauthorized') :
-                        error?.includes('500') ? t('login.serverError') :
-                            error || t('login.errorGeneric')
+                error === 'NETWORK_ERROR' ? t('login.networkError') :
+                    error?.includes('401') ? t('login.invalidCredentials') :
+                        error?.includes('403') ? t('login.unauthorized') :
+                            error?.includes('500') ? t('login.serverError') :
+                                t('login.errorGeneric')
             );
             setShowModal(true);
         }

@@ -49,6 +49,8 @@
     "invalidCredentials": "Invalid username or password.",
     "unauthorized": "You are not authorized to access.",
     "serverError": "Internal server error.",
+    "errorGeneric": "An unexpected error occurred. Please try again.",
+    "networkError": "Could not connect to the server. Please check your internet connection.",
     "success": "Login successful.",
     "errorTitle": "Authentication Error",
     "successTitle": "Welcome"

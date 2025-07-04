@@ -49,6 +49,8 @@
     "invalidCredentials": "Usuario o contraseña inválidos.",
     "unauthorized": "No tienes permiso para acceder.",
     "serverError": "Error interno del servidor.",
+    "errorGeneric": "Ocurrió un error inesperado. Por favor, intenta nuevamente.",
+    "networkError": "No se pudo conectar con el servidor. Revisa tu conexión a internet.",
     "success": "Inicio de sesión exitoso.",
     "errorTitle": "Error de autenticación",
     "successTitle": "Bienvenido"
