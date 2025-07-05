@@ -62,7 +62,7 @@ const Footer = () => {
           <span>Colpaz</span>
         </div>
         <div className="footer-copy">
-          © 2025 Colpaz. {t('footer.rightsReserved')}
+          © {new Date().getFullYear()} Colpaz. {t('footer.rightsReserved')}
         </div>
       </div>
     </footer>

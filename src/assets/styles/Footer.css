@@ -25,7 +25,6 @@
   border: 1px solid var(--border-footer);
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 1000px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -114,4 +113,15 @@
   background-color: var(--accent-bg);
   color: var(--accent-fg);
   border-top: 2px solid var(--primary-yellow);
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    display: block;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 }

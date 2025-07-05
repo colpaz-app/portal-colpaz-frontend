@@ -125,10 +125,6 @@
   color: var(--primary-white);
 }
 
-.dark-mode .menu-title:hover {
-  color: var(--primary-black);
-} 
-
 .dark-mode .dropdown-section h4 {
   color: var(--primary-white);
   border-color: var(--primary-yellow);
