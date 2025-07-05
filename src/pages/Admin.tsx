@@ -1,39 +1,51 @@
-import Button from "../components/Button";
 import Card from "../components/Card";
 import '../assets/styles/Admin.css';
 import H2 from "../components/H2";
 import { images } from "../assets/images";
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
     title: "Banners",
     description: "Gestión de banners del sitio",
     imageSrc: images.logoPNG,
+    link: "/admin/banners",
+    textButton: "Administrar",
   },
   {
-    title: "Tarjeta 2",
-    description: "Descripción de tarjeta 2",
-    imageSrc: "https://via.placeholder.com/300x150",
+    title: "Usuarios",
+    description: "Gestión de usuarios del sitio",
+    imageSrc: images.logoPNG,
+    link: "/admin/usuarios",
+    textButton: "Administrar",
   },
   {
     title: "Tarjeta 3",
     description: "Descripción de tarjeta 3",
-    imageSrc: "https://via.placeholder.com/300x150",
+    imageSrc: images.logoPNG,
+    link: "/admin/tarjeta-3",
+    textButton: "Administrar",
   },
   {
     title: "Tarjeta 4",
     description: "Descripción de tarjeta 4",
-    imageSrc: "https://via.placeholder.com/300x150",
+    imageSrc: images.logoPNG,
+    link: "/admin/tarjeta-4",
+    textButton: "Administrar",
   },
   {
     title: "Tarjeta 5",
     description: "Descripción de tarjeta 5",
-    imageSrc: "https://via.placeholder.com/300x150",
+    imageSrc: images.logoPNG,
+    link: "/admin/tarjeta-5",
+    textButton: "Administrar",
   },
   {
     title: "Tarjeta 6",
     description: "Descripción de tarjeta 6",
-    imageSrc: "https://via.placeholder.com/300x150",
+    imageSrc: images.logoPNG,
+    link: "/admin/tarjeta-6",
+    textButton: "Administrar",
   },
 ];
 
@@ -49,7 +61,7 @@ const Admin = () => {
               title={card.title}
               description={card.description}
               imageSrc={card.imageSrc}
-              footer={<Button variant="primary">Acción</Button>}
+              footer={<Link className="admin-card-link" to={card.link}>{card.textButton}</Link>}
             />
           ))}
         </div>

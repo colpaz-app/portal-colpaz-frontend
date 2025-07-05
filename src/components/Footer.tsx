@@ -54,11 +54,13 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-logo">
-          <img
-            src={images.logoPNG}
-            alt={t('header.logoAlt')}
-            className="header-logo"
-          />
+          <div className="footer-logo-left">
+            <img
+              src={images.logoPNG}
+              alt={t('header.logoAlt')}
+              className="header-logo"
+            />
+          </div>
           <span>Colpaz</span>
         </div>
         <div className="footer-copy">

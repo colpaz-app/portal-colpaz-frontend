@@ -5,6 +5,23 @@
   margin-top: 2rem;
 }
 
+.admin-card-link {
+  padding: 0.45rem 1.25rem;
+  font-size: var(--font-size-base);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+  text-decoration: none;
+}
+
+.admin-card-link:hover {
+  background-color: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-hover-fg);
+}
+
 @media (max-width: 1024px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);

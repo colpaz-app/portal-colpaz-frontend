@@ -82,6 +82,11 @@
   text-decoration: none;
 }
 
+.header-left {
+  border-radius: 25%;
+  background-color: var(--primary-white);
+}
+
 .header-social-item:hover {
   background-color: var(--primary-blue);
   color: var(--primary-white);
@@ -92,6 +97,11 @@
   background-color: var(--accent-bg);
   color: var(--primary-white);
   border-bottom: 2px solid var(--primary-blue-dark);
+}
+
+.dark-mode .header-left {
+  border-radius: 0%;
+  background-color: transparent;
 }
 
 .dark-mode .header-separator {

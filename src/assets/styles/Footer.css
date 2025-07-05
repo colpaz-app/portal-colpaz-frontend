@@ -74,6 +74,11 @@
   gap: 0.75rem;
 }
 
+.footer-logo-left {
+  border-radius: 25%;
+  background-color: var(--primary-white);
+}
+
 .footer-logo img {
   height: var(--logo-height-small);
 }
@@ -92,6 +97,11 @@
 /* Dark mode */
 .dark-mode .footer-background {
   background-color: var(--accent-bg);
+}
+
+.dark-mode .footer-logo-left {
+  border-radius: 0%;
+  background-color: transparent;
 }
 
 .dark-mode .footer-box {
