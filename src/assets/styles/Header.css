@@ -91,7 +91,7 @@
 .dark-mode .main-header {
   background-color: var(--accent-bg);
   color: var(--primary-white);
-  border-bottom: 2px solid var(--primary-yellow);
+  border-bottom: 2px solid var(--primary-blue-dark);
 }
 
 .dark-mode .header-separator {

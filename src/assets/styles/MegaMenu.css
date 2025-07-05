@@ -109,7 +109,7 @@
 /* Modo oscuro */
 .dark-mode .mega-navbar {
   background-color: var(--accent-bg);
-  border-bottom: 4px solid var(--primary-yellow);
+  border-bottom: 4px solid var(--primary-blue-dark);
 }
 
 .dark-mode .menu-title.clickable:hover,
@@ -127,12 +127,12 @@
 
 .dark-mode .dropdown-section h4 {
   color: var(--primary-white);
-  border-color: var(--primary-yellow);
+  border-color: var(--primary-blue-dark);
 }
 
 .dark-mode .mega-dropdown {
   background-color: var(--accent-bg);
-  border-color: var(--primary-yellow);
+  border-color: var(--primary-blue-dark);
 }
 
 .mega-navbar-toggle {

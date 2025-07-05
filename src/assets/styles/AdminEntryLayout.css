@@ -1,20 +1,19 @@
-.layout {
+.admin-entry-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--primary-white);
 }
 
-.layout-main {
+.admin-entry-layout-main {
   flex: 1;
-  padding: 2rem 2rem 2rem 2rem;
 }
 
-.dark-mode .layout {
+.dark-mode .admin-entry-layout {
   background-color: var(--accent-bg);
 }
 
-.dark-mode .layout-main {
+.dark-mode .admin-entry-layout-main {
   background-color: var(--accent-2-bg);
   color: var(--text-color);
 }

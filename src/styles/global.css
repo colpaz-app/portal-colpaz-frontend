@@ -2,7 +2,6 @@
   --primary-white: #ffffff;
   --primary-black: #000000;
   --primary-blue: #393DBA;
-  --primary-yellow: #f4bf00;
   --primary-gray: #b3b2b2;
   --primary-light-gray: #f3f3f3;
   --secondary-gray: #707070;
@@ -36,7 +35,7 @@
 
   --text-color: var(--primary-black);
   --text-link-color: var(--primary-blue);
-  --text-link-hover-color: var(--primary-yellow);
+  --text-link-hover-color: var(--primary-blue);
 
   --logo-height: 60px;
   --logo-height-small: 40px;
@@ -63,12 +62,12 @@
   --btn-primary-active-fg: var(--primary-white);
 
   /* Secondary */
-  --btn-secondary-bg: var(--primary-yellow);
-  --btn-secondary-fg: var(--primary-black);
-  --btn-secondary-hover-bg: #e0ac00;
-  --btn-secondary-hover-fg: var(--primary-black);
-  --btn-secondary-active-bg: #d49e00;
-  --btn-secondary-active-fg: var(--primary-black);
+  --btn-secondary-bg: var(--primary-blue);
+  --btn-secondary-fg: var(--primary-white);
+  --btn-secondary-hover-bg: #2f37a0;
+  --btn-secondary-hover-fg: var(--primary-white);
+  --btn-secondary-active-bg: #262d84;
+  --btn-secondary-active-fg: var(--primary-white);
 
   /* Danger */
   --btn-danger-bg: var(--color-error);
@@ -92,8 +91,8 @@
   /* Link */
   --btn-link-bg: transparent;
   --btn-link-fg: var(--primary-blue);
-  --btn-link-hover-fg: var(--primary-yellow);
-  --btn-link-active-fg: #d49e00;
+  --btn-link-hover-fg: var(--primary-blue);
+  --btn-link-active-fg: var(--primary-blue);
 
   /* Disabled */
   --btn-disabled-bg: var(--primary-gray);
@@ -116,13 +115,13 @@
   --btn-success-active-bg: #1b5e20;
   --btn-success-active-fg: var(--primary-white);
 
-  /* Warning */
-  --btn-warning-bg: var(--primary-yellow);
-  --btn-warning-fg: var(--primary-black);
-  --btn-warning-hover-bg: #e0ac00;
-  --btn-warning-hover-fg: var(--primary-black);
-  --btn-warning-active-bg: #d49e00;
-  --btn-warning-active-fg: var(--primary-black);
+  /* Warning (ahora azul) */
+  --btn-warning-bg: var(--primary-blue);
+  --btn-warning-fg: var(--primary-white);
+  --btn-warning-hover-bg: #2f37a0;
+  --btn-warning-hover-fg: var(--primary-white);
+  --btn-warning-active-bg: #262d84;
+  --btn-warning-active-fg: var(--primary-white);
 
   /* Info */
   --btn-info-bg: #17a2b8;
@@ -134,13 +133,15 @@
 }
 
 .dark-mode {
+  --primary-blue-dark: var(--primary-blue);
+
   --primary-light-gray: #3a3a3a;
   --color-success: lightgreen;
   --color-error: salmon;
 
   --text-color: var(--primary-white);
   --text-link-color: var(--primary-blue);
-  --text-link-hover-color: var(--primary-yellow);
+  --text-link-hover-color: var(--primary-blue);
 
   --accent-bg: #121a2a;
   --accent-2-bg: #242424;
@@ -153,16 +154,35 @@
   --btn-active-bg: #393DBA;
   --btn-active-fg: var(--primary-white);
 
-  --btn-primary-hover-bg: #f4bf00;
-  --btn-primary-hover-fg: var(--primary-black); 
-  --btn-primary-active-bg: #e0ac00;
+  /* Primary */
+  --btn-primary-bg: var(--primary-blue);
+  --btn-primary-fg: var(--primary-white);
+  --btn-primary-hover-bg: #2f37a0;
+  --btn-primary-hover-fg: var(--primary-white);
+  --btn-primary-active-bg: #262d84;
+  --btn-primary-active-fg: var(--primary-white);
 
+  /* Secondary */
+  --btn-secondary-bg: var(--primary-blue);
+  --btn-secondary-fg: var(--primary-white);
   --btn-secondary-hover-bg: #2f37a0;
+  --btn-secondary-hover-fg: var(--primary-white);
   --btn-secondary-active-bg: #262d84;
+  --btn-secondary-active-fg: var(--primary-white);
 
+  /* Warning (azul también en oscuro) */
+  --btn-warning-bg: var(--primary-blue);
+  --btn-warning-fg: var(--primary-white);
+  --btn-warning-hover-bg: #2f37a0;
+  --btn-warning-hover-fg: var(--primary-white);
+  --btn-warning-active-bg: #262d84;
+  --btn-warning-active-fg: var(--primary-white);
+
+  /* Danger */
   --btn-danger-hover-bg: #ff4d4d;
   --btn-danger-active-bg: #cc0000;
 
+  /* Outline */
   --btn-outline-bg: transparent;
   --btn-outline-fg: var(--primary-white);
   --btn-outline-border: var(--primary-white);
@@ -173,7 +193,7 @@
   --btn-outline-active-fg: var(--primary-black);
   --btn-outline-active-border: #f4f4f4;
 
-  --btn-link-fg: var(--primary-yellow);
+  --btn-link-fg: var(--primary-blue);
   --btn-link-hover-fg: var(--primary-white);
   --btn-link-active-fg: var(--primary-gray);
 
@@ -191,9 +211,6 @@
   --btn-success-bg: lightgreen;
   --btn-success-hover-bg: #66bb6a;
   --btn-success-active-bg: #388e3c;
-
-  --btn-warning-hover-bg: #e6b800;
-  --btn-warning-active-bg: #cca300;
 
   --btn-info-bg: #138496;
   --btn-info-hover-bg: #11707f;

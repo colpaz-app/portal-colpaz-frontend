@@ -101,7 +101,7 @@
 }
 
 .dark-mode .modal-header {
-  background-color: var(--primary-yellow);
+  background-color: var(--primary-blue-dark);
   color: var(--primary-black);
 }
 

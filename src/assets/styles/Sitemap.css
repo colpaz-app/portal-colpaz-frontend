@@ -1,5 +1,4 @@
 .site-map {
-  color: var(--text-color);
   line-height: var(--line-height-base);
   padding: 0;
   margin: 0;
@@ -59,5 +58,5 @@
 }
 
 .dark-mode .site-map strong {
-    color: var(--primary-yellow);
+    color: var(--primary-blue);
 }
