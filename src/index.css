@@ -8,3 +8,13 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
+.full-width-banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -2rem;
+}

@@ -1,0 +1,93 @@
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.banner-slide {
+  position: relative;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+}
+
+.banner-info {
+  position: absolute;
+  bottom: 5rem;
+  left: 3rem;
+  color: var(--primary-white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 1200px;
+}
+
+.banner-title {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.25rem;
+}
+
+.banner-description {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--primary-white);
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 0.5rem;
+}
+
+.carousel-control.next {
+  right: 0.5rem;
+}
+
+.carousel-controls-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-gray);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background: var(--primary-blue);
+}

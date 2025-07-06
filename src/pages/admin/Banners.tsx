@@ -8,24 +8,11 @@ import Pagination from '../../components/Pagination';
 
 import { useHttp } from '../../hooks/useHttp';
 import { usePagination } from '../../hooks/usePagination';
+import type { Banner } from '../../types/Banner';
 
 import '../../assets/styles/admin/Banners.css';
 
 import Button from '../../components/Button';
-
-interface Banner {
-    id: number;
-    title: string;
-    imageUrl: string;
-    link: string;
-    startDate: string;
-    endDate: string;
-    isActive: boolean;
-    createdBy: string;
-    createdAt: string;
-    modifiedAt: string;
-    status?: string;
-}
 
 interface FilterConfig {
     key: keyof Banner | 'status';

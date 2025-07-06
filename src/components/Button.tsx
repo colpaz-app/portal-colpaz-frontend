@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   variant?: 'primary' | 'secondary' | 'danger' | 'outline' | 'link' | 'light' | 'success' | 'warning' | 'info' | 'accessibility';
-  size?: 'icon' | 'padding-0';
+  size?: 'icon' | 'padding-0' | 'medium';
   disabled?: boolean;
   title?: string;
 }

@@ -17,6 +17,10 @@
   font-size: 1.3rem;
 }
 
+.btn-medium {
+  font-size: 2rem;
+}
+
 .custom-button:disabled {
   background-color: var(--btn-disabled-bg);
   color: var(--btn-disabled-fg);
@@ -74,14 +78,6 @@
 }
 .btn-link:hover {
   color: var(--btn-link-hover-fg);
-}
-
-.btn-light {
-  color: var(--btn-light-fg);
-}
-
-.btn-light:hover {
-  color: var(--btn-light-hover-fg);
 }
 
 .btn-success {
