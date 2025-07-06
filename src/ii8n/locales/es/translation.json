@@ -92,7 +92,25 @@
     "nextPage": "Sig."
   },
   "filtersBar": {
-    "clearFilters": "Limpiar"
+    "clearFilters": "Limpiar",
+    "title": "Título",
+    "status": "Estado",
+    "createdAt": "Fecha de creación",
+    "createdBy": "Creado por",
+    "searchByPlaceholder": "Buscar por"
+  },
+  "table": {
+    "noData": "No hay datos disponibles",
+    "loading": "Cargando datos...",
+    "error": "Error al cargar los datos",
+    "errorTitle": "Error al cargar la tabla",
+    "title": "Título",
+    "status": "Estado",
+    "createdAt": "Fecha de creación",
+    "createdBy": "Creado por",
+    "actions": "Acciones",
+    "edit": "Editar",
+    "delete": "Eliminar"
   },
   "logout": {
     "title": "Cerrando sesión...",

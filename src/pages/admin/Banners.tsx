@@ -53,10 +53,10 @@ const Banners = () => {
     const [filters, setFilters] = useState<Record<string, string>>({});
 
     const filterConfig: FilterConfig[] = [
-        { key: 'title', label: 'Título' },
-        { key: 'status', label: 'Estado' },
-        { key: 'createdAt', label: 'Fecha' },
-        { key: 'createdBy', label: 'Creado por' }
+        { key: 'title', label: t('filtersBar.title') },
+        { key: 'status', label: t('filtersBar.status') },
+        { key: 'createdAt', label: t('filtersBar.createdAt') },
+        { key: 'createdBy', label: t('filtersBar.createdBy') }
     ];
 
     const handleFilterChange = (key: string, value: string) => {
@@ -114,17 +114,17 @@ const Banners = () => {
                     <Table
                         data={paginatedData}
                         columns={[
-                            { header: 'Título', accessor: 'title' },
-                            { header: 'Fecha', accessor: 'createdAt' },
-                            { header: 'Creado por', accessor: 'createdBy' },
-                            { header: 'Estado', accessor: 'status' },
+                            { header: t('table.title'), accessor: 'title' },
+                            { header: t('table.createdAt'), accessor: 'createdAt' },
+                            { header: t('table.createdBy'), accessor: 'createdBy' },
+                            { header: t('table.status'), accessor: 'status' },
                         ]}
                         actions={(item) => (
                             <>
-                                <button className="btn btn-sm btn-warning" onClick={() => alert(`Editar ${item.id}`)}>
+                                <button className="btn btn-sm btn-warning" title={t('table.edit')} onClick={() => alert(`${t('table.edit')} ${item.id}`)}>
                                     <i className="fa-solid fa-pen"></i>
                                 </button>
-                                <button className="btn btn-sm btn-danger" onClick={() => alert(`Eliminar ${item.id}`)}>
+                                <button className="btn btn-sm btn-danger" title={t('table.delete')} onClick={() => alert(`${t('table.delete')} ${item.id}`)}>
                                     <i className="fa-solid fa-trash"></i>
                                 </button>
                             </>

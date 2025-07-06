@@ -1,5 +1,6 @@
 import '../assets/styles/Table.css';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface TableProps<T> {
     data: T[];
@@ -9,6 +10,8 @@ interface TableProps<T> {
 
 function Table<T>({ data, columns, actions }: TableProps<T>) {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -67,7 +70,7 @@ function Table<T>({ data, columns, actions }: TableProps<T>) {
                         {columns.map((col, i) => (
                             <th key={i}>{col.header}</th>
                         ))}
-                        {actions && <th>Acciones</th>}
+                        {actions && <th>{t('table.actions')}</th>}
                     </tr>
                 </thead>
                 <tbody>

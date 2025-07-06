@@ -34,7 +34,7 @@ export default function FiltersBar({
             <input
               id={key}
               type="text"
-              placeholder={placeholder || `Buscar por ${label.toLowerCase()}...`}
+              placeholder={placeholder || `${t('filtersBar.searchByPlaceholder')} ${label.toLowerCase()}...`}
               value={filters[key] || ''}
               onChange={(e) => onFilterChange(key, e.target.value)}
             />
