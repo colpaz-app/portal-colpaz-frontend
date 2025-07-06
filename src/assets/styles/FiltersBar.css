@@ -1,9 +1,16 @@
 .filters-bar {
   display: flex;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.filters-inputs {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .filter-group {
@@ -27,6 +34,7 @@
   background-color: var(--primary-light-gray);
   color: var(--text-color);
   font-size: var(--font-size-base);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .dark-mode .filter-group input {
@@ -35,10 +43,29 @@
   border-color: var(--primary-white);
 }
 
+.clear-filters {
+  flex-shrink: 0;
+}
+
+.clear-filters i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 @media (max-width: 768px) {
-  .filter-group {
-    flex: 1 1 100%;
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters-inputs {
+    flex-direction: column;
     width: 100%;
-    min-width: 100%;
+  }
+
+  .clear-filters {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
   }
 }

@@ -80,7 +80,8 @@
       }
     },
     "banners": {
-      "title": "Banners"
+      "title": "Banners",
+      "addNew": "Add New"
     },
     "manage": "Manage"
   },
@@ -90,6 +91,9 @@
     "previousPage": "Previous",
     "nextPage": "Next",
     "paginaionLastPage": "Last page"
+  },
+  "filtersBar": {
+    "clearFilters": "Clear"
   },
   "logout": {
     "title": "Logging out...",

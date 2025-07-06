@@ -9,6 +9,10 @@ import Pagination from '../../components/Pagination';
 import { useHttp } from '../../hooks/useHttp';
 import { usePagination } from '../../hooks/usePagination';
 
+import '../../assets/styles/admin/Banners.css';
+
+import Button from '../../components/Button';
+
 interface Banner {
     id: number;
     title: string;
@@ -42,11 +46,17 @@ const Banners = () => {
         sendRequest();
     }, [sendRequest]);
 
+    const handleClearFilters = () => {
+        setFilters({});
+    };
+
     const [filters, setFilters] = useState<Record<string, string>>({});
 
     const filterConfig: FilterConfig[] = [
         { key: 'title', label: 'Título' },
-        { key: 'status', label: 'Estado' }
+        { key: 'status', label: 'Estado' },
+        { key: 'createdAt', label: 'Fecha' },
+        { key: 'createdBy', label: 'Creado por' }
     ];
 
     const handleFilterChange = (key: string, value: string) => {
@@ -60,7 +70,8 @@ const Banners = () => {
         return (banners || [])
             .map((banner) => ({
                 ...banner,
-                status: banner.isActive ? 'Activo' : 'Inactivo'
+                status: banner.isActive ? 'Activo' : 'Inactivo',
+                createdAt: banner.createdAt.slice(0, 10),
             }))
             .filter((banner) =>
                 Object.entries(filters).every(([key, value]) =>
@@ -82,6 +93,12 @@ const Banners = () => {
         <div className="admin-banners-page">
             <H2>{t('adminPanel.banners.title')}</H2>
 
+            <div className="button-add-section">
+                <Button variant="primary" onClick={() => alert('Abrir formulario de creación')}>
+                    {t('adminPanel.banners.addNew')}
+                </Button>
+            </div>
+
             {loading && <p>{t('loading')}</p>}
             {error && <p style={{ color: 'red' }}>{t('error')}: {error}</p>}
 
@@ -91,14 +108,16 @@ const Banners = () => {
                         filters={filters}
                         filterConfig={filterConfig}
                         onFilterChange={handleFilterChange}
+                        onClear={handleClearFilters}
                     />
 
                     <Table
                         data={paginatedData}
                         columns={[
-                            { header: 'ID', accessor: 'id' },
                             { header: 'Título', accessor: 'title' },
-                            { header: 'Estado', accessor: 'status' }
+                            { header: 'Fecha', accessor: 'createdAt' },
+                            { header: 'Creado por', accessor: 'createdBy' },
+                            { header: 'Estado', accessor: 'status' },
                         ]}
                         actions={(item) => (
                             <>
