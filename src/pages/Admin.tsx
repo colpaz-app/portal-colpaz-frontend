@@ -4,6 +4,8 @@ import H2 from "../components/H2";
 import { images } from "../assets/images";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { usePagination } from "../hooks/usePagination";
+import Pagination from "../components/Pagination";
 
 const Admin = () => {
     const { t } = useTranslation();
@@ -23,7 +25,7 @@ const Admin = () => {
             imageSrc: images.logoPNG,
             link: "/admin/translated-banners",
             textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.banners.titleLink"),
+            titleLink: t("adminPanel.cards.translatedBanners.titleLink"),
         },
         {
             title: t("adminPanel.cards.languages.title"),
@@ -31,7 +33,7 @@ const Admin = () => {
             imageSrc: images.logoPNG,
             link: "/admin/languages",
             textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.banners.titleLink"),
+            titleLink: t("adminPanel.cards.languages.titleLink"),
         },
         {
             title: t("adminPanel.cards.users.title"),
@@ -39,7 +41,7 @@ const Admin = () => {
             imageSrc: images.logoPNG,
             link: "/admin/users",
             textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.banners.titleLink"),
+            titleLink: t("adminPanel.cards.users.titleLink"),
         },
         {
             title: t("adminPanel.cards.card5.title"),
@@ -58,21 +60,37 @@ const Admin = () => {
         },
     ];
 
+    const {
+        currentPage,
+        totalPages,
+        paginatedData,
+        goToPage,
+    } = usePagination(cardData, 8);
+
     return (
         <div className="admin-page">
             <div className="admin-page-main">
-                <H2>Panel de Administración</H2>
+                <H2>{t("adminPanel.title")}</H2>
                 <div className="card-grid">
-                    {cardData.map((card, index) => (
+                    {paginatedData.map((card, index) => (
                         <Card
                             key={index}
                             title={card.title}
                             description={card.description}
                             imageSrc={card.imageSrc}
-                            footer={<Link title={card.titleLink} className="admin-card-link" to={card.link}>{card.textButton}</Link>}
+                            footer={
+                                <Link title={card.titleLink} className="admin-card-link" to={card.link}>
+                                    {card.textButton}
+                                </Link>
+                            }
                         />
                     ))}
                 </div>
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={goToPage}
+                />
             </div>
         </div>
     );

@@ -20,6 +20,10 @@
   font-weight: var(--font-weight-regular);
 }
 
+.title-sitemap {
+  margin-bottom: 1rem;
+}
+
 .site-map a:hover {
   text-decoration: underline;
 }

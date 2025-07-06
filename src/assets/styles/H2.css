@@ -2,13 +2,17 @@
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   position: relative;
+  display: inline-block;
   margin: 0px;
 }
 
 .heading-underline {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 50%;
   height: 4px;
-  width: 60px;
   background-color: var(--primary-blue);
-  border-radius: 2px;
-  margin-bottom: 1rem;
+  content: '';
+  border-radius: 10px;
 }

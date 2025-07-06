@@ -81,6 +81,12 @@
     },
     "manage": "Administrar"
   },
+  "pagination": {
+    "firstPage": "Primero",
+    "lastPage": "Último",
+    "previousPage": "Ant.",
+    "nextPage": "Sig."
+  },
   "logout": {
     "title": "Cerrando sesión...",
     "message": "Redirigiéndote a la página principal"

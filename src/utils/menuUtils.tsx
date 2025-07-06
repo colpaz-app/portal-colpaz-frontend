@@ -32,7 +32,6 @@ export function filterVisibleItems(items: MenuItem[], options: FilterOptions): M
       return { ...item, children: filteredChildren };
     })
     .filter(item => {
-      // Si no tiene path ni hijos visibles, no lo mostramos
       if (!item.path && item.children && item.children.length === 0) return false;
       return true;
     });

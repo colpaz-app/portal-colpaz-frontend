@@ -31,10 +31,9 @@
 .admin-entry-section {
   flex: 1;
   background-color: var(--primary-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   padding: 0rem 2rem;
+  align-content: center;
 }
 
 .admin-entry-logo {

@@ -22,7 +22,7 @@ const SiteMap = () => {
 
   return (
     <div className="site-map">
-      <H2>{t('siteMap.title')}</H2>
+      <H2 className="title-sitemap">{t('siteMap.title')}</H2>
       <RenderMenuList items={sitemapItems} t={t} />
     </div>
   );

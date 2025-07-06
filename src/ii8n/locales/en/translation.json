@@ -81,6 +81,13 @@
     },
     "manage": "Manage"
   },
+  "pagination": {
+    "firstPage": "First",
+    "lastPage": "Last",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "paginaionLastPage": "Last page"
+  },
   "logout": {
     "title": "Logging out...",
     "message": "Redirecting to the home page"

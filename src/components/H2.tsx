@@ -12,8 +12,8 @@ const H2 = ({ children, className = '', underlineClassName = '' }: H2Props) => {
     <>
       <h2 className={`heading-h2 ${className}`}>
         {children}
+        <span className={`heading-underline ${underlineClassName}`}></span>
       </h2>
-      <div className={`heading-underline ${underlineClassName}`}></div>
     </>
   );
 };
