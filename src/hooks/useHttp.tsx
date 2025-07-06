@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { ENV } from '../config/env';
 
 interface HttpOptions {
@@ -23,17 +23,16 @@ export function useHttp<T = unknown>(
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const sendRequest = async (): Promise<T | null> => {
+    const sendRequest = useCallback(async (): Promise<T | null> => {
         setLoading(true);
         setError(null);
-        setData(null);
 
         try {
             const res = await fetch(`${ENV.apiUrl}${endpoint}`, {
                 method: options.method || 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: options.token ? `Bearer ${options.token}` : '',
+                    Authorization: `Bearer ${options.token || localStorage.getItem('token') || ''}`,
                     ...options.headers,
                 },
                 body: options.body ? JSON.stringify(options.body) : undefined,
@@ -63,7 +62,7 @@ export function useHttp<T = unknown>(
         } finally {
             setLoading(false);
         }
-    };
+    }, [endpoint, options.method, options.body, options.headers, options.token]);
 
     return { data, loading, error, sendRequest };
 }

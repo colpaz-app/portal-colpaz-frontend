@@ -1,0 +1,44 @@
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.filter-group {
+  flex: 1 1 calc(25% - 1rem);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.filter-group label {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.filter-group input {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--primary-gray);
+  border-radius: 10px;
+  background-color: var(--primary-light-gray);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+}
+
+.dark-mode .filter-group input {
+  background-color: var(--primary-light-gray);
+  color: var(--primary-white);
+  border-color: var(--primary-white);
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+}
