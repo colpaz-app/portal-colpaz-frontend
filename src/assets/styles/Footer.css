@@ -128,10 +128,21 @@
 @media (max-width: 768px) {
   .footer-bottom {
     display: block;
+    padding: 1rem 2rem;
+  }
+
+  .footer-background{
+    padding: 3rem 2rem 2rem 2rem;
   }
 
   .footer-logo {
     justify-content: center;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    min-width: 100%;
   }
 }

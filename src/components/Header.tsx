@@ -21,12 +21,14 @@ const Header = () => {
     return (
         <>
             <header className="main-header">
-                <div className="header-left">
-                    <img
-                        src={logo}
-                        alt={t('header.logoAlt')}
-                        className="header-logo"
-                    />
+                <div className="header-left-container">
+                    <div className="header-left">
+                        <img
+                            src={logo}
+                            alt={t('header.logoAlt')}
+                            className="header-logo"
+                        />
+                    </div>
                 </div>
 
                 <div className="header-right">

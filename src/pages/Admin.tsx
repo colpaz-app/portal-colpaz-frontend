@@ -43,21 +43,6 @@ const Admin = () => {
             textButton: t("adminPanel.manage"),
             titleLink: t("adminPanel.cards.users.titleLink"),
         },
-        {
-            title: t("adminPanel.cards.card5.title"),
-            description: t("adminPanel.cards.card5.description"),
-            imageSrc: images.logoPNG,
-            link: "/admin/tarjeta-5",
-            textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.banners.titleLink"),
-        },
-        {
-            title: t("adminPanel.cards.card6.title"),
-            description: t("adminPanel.cards.card6.description"),
-            link: "/admin/tarjeta-6",
-            textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.banners.titleLink"),
-        },
     ];
 
     const {

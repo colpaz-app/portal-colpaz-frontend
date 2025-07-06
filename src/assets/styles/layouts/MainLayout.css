@@ -18,3 +18,9 @@
   background-color: var(--accent-2-bg);
   color: var(--text-color);
 }
+
+@media (max-width: 768px) {
+  .layout-main {
+    padding: 2rem;
+  }
+}
