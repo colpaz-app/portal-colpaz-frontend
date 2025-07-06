@@ -83,6 +83,9 @@
       "title": "Banners",
       "addNew": "Agregar nuevo"
     },
+    "languages": {
+      "title": "Lenguajes"
+    },
     "manage": "Administrar"
   },
   "pagination": {
@@ -97,7 +100,9 @@
     "status": "Estado",
     "createdAt": "Fecha de creación",
     "createdBy": "Creado por",
-    "searchByPlaceholder": "Buscar por"
+    "searchByPlaceholder": "Buscar por",
+    "name": "Nombre",
+    "code": "Código"
   },
   "table": {
     "noData": "No hay datos disponibles",
@@ -110,7 +115,10 @@
     "createdBy": "Creado por",
     "actions": "Acciones",
     "edit": "Editar",
-    "delete": "Eliminar"
+    "delete": "Eliminar",
+    "view": "Ver",
+    "name": "Nombre",
+    "code": "Código"
   },
   "logout": {
     "title": "Cerrando sesión...",

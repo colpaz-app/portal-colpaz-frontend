@@ -20,20 +20,20 @@ const Admin = () => {
             titleLink: t("adminPanel.cards.banners.titleLink"),
         },
         {
-            title: t("adminPanel.cards.translatedBanners.title"),
-            description: t("adminPanel.cards.translatedBanners.description"),
-            imageSrc: images.logoPNG,
-            link: "/admin/translated-banners",
-            textButton: t("adminPanel.manage"),
-            titleLink: t("adminPanel.cards.translatedBanners.titleLink"),
-        },
-        {
             title: t("adminPanel.cards.languages.title"),
             description: t("adminPanel.cards.languages.description"),
             imageSrc: images.logoPNG,
             link: "/admin/languages",
             textButton: t("adminPanel.manage"),
             titleLink: t("adminPanel.cards.languages.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.translatedBanners.title"),
+            description: t("adminPanel.cards.translatedBanners.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/translated-banners",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.translatedBanners.titleLink"),
         },
         {
             title: t("adminPanel.cards.users.title"),

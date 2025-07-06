@@ -13,6 +13,7 @@ import AdminLayout from '../layout/AdminLayout';
 import Admin from '../pages/Admin';
 import Banners from '../pages/admin/Banners';
 import NotFoundLayout from '../layout/NotFoundLayou';
+import Languages from '../pages/admin/Languages';
 
 const IndexRouter = () => {
   return (
@@ -44,6 +45,7 @@ const IndexRouter = () => {
         }>
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/banners" element={<Banners />} />
+          <Route path="/admin/languages" element={<Languages />} />
         </Route>
         <Route element={<NotFoundLayout />}>
           <Route path="*" element={<NotFoundPage />} />

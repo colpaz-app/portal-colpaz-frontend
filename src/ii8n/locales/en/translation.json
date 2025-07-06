@@ -83,6 +83,9 @@
       "title": "Banners",
       "addNew": "Add New"
     },
+    "languages": {
+      "title": "Languages"
+    },
     "manage": "Manage"
   },
   "pagination": {
@@ -98,7 +101,9 @@
     "status": "Status",
     "createdAt": "Created At",
     "createdBy": "Created By",
-    "searchByPlaceholder": "Search by"
+    "searchByPlaceholder": "Search by",
+    "name": "Name",
+    "code": "Code"
   },
   "table": {
     "noData": "No data available",
@@ -111,7 +116,9 @@
     "actions": "Actions",
     "edit": "Edit",
     "delete": "Delete",
-    "view": "View"
+    "view": "View",
+    "name": "Name",
+    "code": "Code"
   },
   "logout": {
     "title": "Logging out...",
