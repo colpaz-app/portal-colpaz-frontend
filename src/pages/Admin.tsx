@@ -50,7 +50,7 @@ const Admin = () => {
         totalPages,
         paginatedData,
         goToPage,
-    } = usePagination(cardData, 1);
+    } = usePagination(cardData, 8);
 
     return (
         <div className="admin-page">
