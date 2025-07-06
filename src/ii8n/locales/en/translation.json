@@ -79,6 +79,9 @@
         "titleLink": "Go Manage Users"
       }
     },
+    "banners": {
+      "title": "Banners"
+    },
     "manage": "Manage"
   },
   "pagination": {

@@ -79,6 +79,9 @@
         "titleLink": "Ir a Usuarios"
       }
     },
+    "banners": {
+      "title": "Banners"
+    },
     "manage": "Administrar"
   },
   "pagination": {
