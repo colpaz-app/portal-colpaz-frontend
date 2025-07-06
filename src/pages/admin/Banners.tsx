@@ -121,12 +121,12 @@ const Banners = () => {
                         ]}
                         actions={(item) => (
                             <>
-                                <button className="btn btn-sm btn-warning" title={t('table.edit')} onClick={() => alert(`${t('table.edit')} ${item.id}`)}>
+                                <Button variant='warning' size="icon" title={t('table.edit')} onClick={() => alert(`${t('table.edit')} ${item.id}`)}>
                                     <i className="fa-solid fa-pen"></i>
-                                </button>
-                                <button className="btn btn-sm btn-danger" title={t('table.delete')} onClick={() => alert(`${t('table.delete')} ${item.id}`)}>
+                                </Button>
+                                <Button variant='danger' size="icon" title={t('table.delete')} onClick={() => alert(`${t('table.delete')} ${item.id}`)}>
                                     <i className="fa-solid fa-trash"></i>
-                                </button>
+                                </Button>
                             </>
                         )}
                     />

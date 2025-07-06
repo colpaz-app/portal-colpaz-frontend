@@ -10,6 +10,11 @@
   overflow-y: auto;
 }
 
+.modal-header-left {
+  border-radius: 25%;
+  background-color: var(--primary-white);
+}
+
 .modal-container {
   background-color: var(--primary-white);
   color: var(--text-color);

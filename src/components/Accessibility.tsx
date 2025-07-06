@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../assets/styles/Accessibility.css';
 import { useTranslation } from 'react-i18next';
 import { useAccessibility } from '../hooks/useAccessibility';
+import Button from './Button';
 
 const Accessibility = () => {
   const { t } = useTranslation();
@@ -18,18 +19,18 @@ const Accessibility = () => {
   return (
     <div className="accessibility-container">
       <div className={`accessibility-panel ${showPanel ? 'open' : ''}`}>
-        <button onClick={increaseFont} title={t('accessibility.increaseFont')}>
+        <Button size="icon" onClick={increaseFont} title={t('accessibility.increaseFont')}>
           <i className="fas fa-plus"></i>
-        </button>
-        <button onClick={decreaseFont} title={t('accessibility.decreaseFont')}>
+        </Button>
+        <Button size="icon" onClick={decreaseFont} title={t('accessibility.decreaseFont')}>
           <i className="fas fa-minus"></i>
-        </button>
-        <button onClick={toggleContrast} title={t('accessibility.highContrast')}>
+        </Button>
+        <Button size="icon" onClick={toggleContrast} title={t('accessibility.highContrast')}>
           <i className="fas fa-adjust"></i>
-        </button>
-        <button onClick={resetAccessibility} title={t('accessibility.reset')}>
+        </Button>
+        <Button size="icon" onClick={resetAccessibility} title={t('accessibility.reset')}>
           <i className="fas fa-sync-alt"></i>
-        </button>
+        </Button>
         <a
           href="http://sedboyaca.gov.co/"
           target="_blank"
@@ -48,13 +49,15 @@ const Accessibility = () => {
         </a>
       </div>
 
-      <button
+      <Button
+        size='padding-0'
+        variant='accessibility'
         className="accessibility-toggle"
         onClick={togglePanel}
         aria-label={t('accessibility.openMenu')}
       >
         <i className="fas fa-universal-access"></i>
-      </button>
+      </Button>
     </div>
   );
 };

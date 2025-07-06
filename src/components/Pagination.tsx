@@ -1,5 +1,6 @@
 import '../assets/styles/Pagination.css';
 import { useTranslation } from 'react-i18next';
+import Button from './Button';
 
 interface Props {
   currentPage: number;
@@ -24,14 +25,15 @@ export default function Pagination({ totalPages, currentPage, onPageChange }: Pr
 
     const addPageButton = (page: number) => {
       pages.push(
-        <button
+        <Button
+          variant='light'
           key={page}
           onClick={() => handlePageClick(page)}
           className={`pagination__button ${currentPage === page ? 'active' : ''}`}
           aria-current={currentPage === page ? 'page' : undefined}
         >
           {page}
-        </button>
+        </Button>
       );
     };
 
@@ -60,23 +62,25 @@ export default function Pagination({ totalPages, currentPage, onPageChange }: Pr
     <div className="pagination">
       {currentPage > 1 && (
         <>
-          <button
+          <Button
+            variant='light'
             onClick={() => handlePageClick(1)}
             className="pagination__button"
             aria-label={t('pagination.firstPage')}
             title={t('pagination.firstPage')}
           >
             {t('pagination.firstPage')}
-          </button>
+          </Button>
           <span className="pagination__separator" aria-hidden="true">|</span>
-          <button
+          <Button
+            variant='light'
             onClick={() => handlePageClick(currentPage - 1)}
             className="pagination__button"
             aria-label={t('pagination.previousPage')}
             title={t('pagination.previousPage')}
           >
             {t('pagination.previousPage')}
-          </button>
+          </Button>
         </>
       )}
 
@@ -84,23 +88,25 @@ export default function Pagination({ totalPages, currentPage, onPageChange }: Pr
 
       {currentPage < totalPages && (
         <>
-          <button
+          <Button
+            variant='light'
             onClick={() => handlePageClick(currentPage + 1)}
             className="pagination__button"
             aria-label={t('pagination.nextPage')}
             title={t('pagination.nextPage')}
           >
             {t('pagination.nextPage')}
-          </button>
+          </Button>
           <span className="pagination__separator" aria-hidden="true">|</span>
-          <button
+          <Button
+            variant='light'
             onClick={() => handlePageClick(totalPages)}
             className="pagination__button"
             aria-label={t('pagination.lastPage')}
             title={t('pagination.lastPage')}
           >
             {t('pagination.lastPage')}
-          </button>
+          </Button>
         </>
       )}
     </div>

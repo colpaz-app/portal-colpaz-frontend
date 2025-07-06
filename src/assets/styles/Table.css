@@ -46,6 +46,11 @@ tbody tr:hover {
   transition: background-color 0.2s ease;
 }
 
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .actions-cell .btn {
   margin-right: 0.25rem;
   padding: 0.3rem 0.6rem;

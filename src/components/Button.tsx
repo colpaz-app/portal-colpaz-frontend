@@ -6,7 +6,8 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   className?: string;
-  variant?: 'primary' | 'secondary' | 'danger' | 'outline' | 'link' | 'light' | 'success' | 'warning' | 'info';
+  variant?: 'primary' | 'secondary' | 'danger' | 'outline' | 'link' | 'light' | 'success' | 'warning' | 'info' | 'accessibility';
+  size?: 'icon' | 'padding-0';
   disabled?: boolean;
   title?: string;
 }
@@ -17,16 +18,20 @@ const Button = ({
   onClick,
   className = '',
   variant = 'primary',
+  size,
   disabled = false,
   title = '',
 }: ButtonProps) => {
+
+  const sizeClass = size ? `btn-${size}` : '';
+
   return (
     <button
       type={type}
       title={title}
       onClick={onClick}
       disabled={disabled}
-      className={`custom-button btn-${variant} ${className}`}
+      className={`custom-button btn-${variant} ${sizeClass} ${className}`}
     >
       {children}
     </button>

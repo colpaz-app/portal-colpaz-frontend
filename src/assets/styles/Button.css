@@ -7,6 +7,16 @@
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+.btn-icon {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
+}
+
+.btn-padding-0 {
+  padding: 0rem;
+  font-size: 1.3rem;
+}
+
 .custom-button:disabled {
   background-color: var(--btn-disabled-bg);
   color: var(--btn-disabled-fg);
@@ -15,6 +25,10 @@
 }
 
 /* Variantes */
+.btn-accessibility {
+  border-radius: 50%;
+}
+
 .btn-primary {
   background-color: var(--btn-primary-bg);
   color: var(--btn-primary-fg);
@@ -63,11 +77,10 @@
 }
 
 .btn-light {
-  background-color: var(--btn-light-bg);
   color: var(--btn-light-fg);
 }
+
 .btn-light:hover {
-  background-color: var(--btn-light-hover-bg);
   color: var(--btn-light-hover-fg);
 }
 

@@ -63,6 +63,11 @@
     width: 100%;
   }
 
+  .filter-group {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .clear-filters {
     margin-top: 0.5rem;
     display: flex;

@@ -2,6 +2,7 @@
 import React from 'react';
 import '../assets/styles/Modal.css';
 import { images } from '../assets/images';
+import Button from './Button';
 
 interface ModalProps {
   type?: 'success' | 'error' | 'warning' | 'info';
@@ -26,9 +27,11 @@ const Modal: React.FC<ModalProps> = ({
     <div className="modal-overlay" onClick={onClose}>
       <div className={`modal-container modal-${type}`} onClick={e => e.stopPropagation()}>
         <div className="modal-header">
-          <img src={images.logoPNG} alt="Colpaz Logo" className="modal-logo" />
+          <div className="modal-header-left">
+            <img src={images.logoPNG} alt="Colpaz Logo" className="modal-logo" />
+          </div>
           <h3 className="modal-title">{title || 'Mensaje del sistema'}</h3>
-          <button className="modal-close" onClick={onClose}>&times;</button>
+          <Button variant='primary' className="modal-close" onClick={onClose}>&times;</Button>
         </div>
 
         <div className="modal-body">
