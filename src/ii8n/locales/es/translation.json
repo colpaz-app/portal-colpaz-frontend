@@ -55,6 +55,32 @@
     "errorTitle": "Error de autenticación",
     "successTitle": "Bienvenido"
   },
+  "adminPanel": {
+    "title": "Panel de Administración",
+    "cards": {
+      "banners": {
+        "title": "Banners",
+        "description": "Gestión de banners del sitio",
+        "titleLink": "Ir a Banners"
+      },
+      "translatedBanners": {
+        "title": "Banners traducidos",
+        "description": "Gestión de banners traducidos del sitio",
+        "titleLink": "Ir a Banners traducidos"
+      },
+      "languages": {
+        "title": "Lenguajes",
+        "description": "Gestión de lenguajes del sitio",
+        "titleLink": "Ir a Lenguajes"
+      },
+      "users": {
+        "title": "Usuarios",
+        "description": "Gestión de usuarios del sitio",
+        "titleLink": "Ir a Usuarios"
+      }
+    },
+    "manage": "Administrar"
+  },
   "logout": {
     "title": "Cerrando sesión...",
     "message": "Redirigiéndote a la página principal"

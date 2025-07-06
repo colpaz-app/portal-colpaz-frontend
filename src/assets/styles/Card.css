@@ -55,3 +55,10 @@
   border-top: 1px solid var(--primary-gray);
   text-align: right;
 }
+
+.card-title,
+.card-description {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}

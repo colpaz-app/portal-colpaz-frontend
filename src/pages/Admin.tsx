@@ -3,71 +3,79 @@ import '../assets/styles/Admin.css';
 import H2 from "../components/H2";
 import { images } from "../assets/images";
 import { Link } from "react-router-dom";
-
-const cardData = [
-  {
-    title: "Banners",
-    description: "Gestión de banners del sitio",
-    imageSrc: images.logoPNG,
-    link: "/admin/banners",
-    textButton: "Administrar",
-  },
-  {
-    title: "Usuarios",
-    description: "Gestión de usuarios del sitio",
-    imageSrc: images.logoPNG,
-    link: "/admin/usuarios",
-    textButton: "Administrar",
-  },
-  {
-    title: "Tarjeta 3",
-    description: "Descripción de tarjeta 3",
-    imageSrc: images.logoPNG,
-    link: "/admin/tarjeta-3",
-    textButton: "Administrar",
-  },
-  {
-    title: "Tarjeta 4",
-    description: "Descripción de tarjeta 4",
-    imageSrc: images.logoPNG,
-    link: "/admin/tarjeta-4",
-    textButton: "Administrar",
-  },
-  {
-    title: "Tarjeta 5",
-    description: "Descripción de tarjeta 5",
-    imageSrc: images.logoPNG,
-    link: "/admin/tarjeta-5",
-    textButton: "Administrar",
-  },
-  {
-    title: "Tarjeta 6",
-    description: "Descripción de tarjeta 6",
-    imageSrc: images.logoPNG,
-    link: "/admin/tarjeta-6",
-    textButton: "Administrar",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const Admin = () => {
-  return (
-    <div className="admin-page">
-      <div className="admin-page-main">
-        <H2>Panel de Administración</H2>
-        <div className="card-grid">
-          {cardData.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              description={card.description}
-              imageSrc={card.imageSrc}
-              footer={<Link className="admin-card-link" to={card.link}>{card.textButton}</Link>}
-            />
-          ))}
+    const { t } = useTranslation();
+
+    const cardData = [
+        {
+            title: t("adminPanel.cards.banners.title"),
+            description: t("adminPanel.cards.banners.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/banners",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.translatedBanners.title"),
+            description: t("adminPanel.cards.translatedBanners.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/translated-banners",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.languages.title"),
+            description: t("adminPanel.cards.languages.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/languages",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.users.title"),
+            description: t("adminPanel.cards.users.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/users",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.card5.title"),
+            description: t("adminPanel.cards.card5.description"),
+            imageSrc: images.logoPNG,
+            link: "/admin/tarjeta-5",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+        {
+            title: t("adminPanel.cards.card6.title"),
+            description: t("adminPanel.cards.card6.description"),
+            link: "/admin/tarjeta-6",
+            textButton: t("adminPanel.manage"),
+            titleLink: t("adminPanel.cards.banners.titleLink"),
+        },
+    ];
+
+    return (
+        <div className="admin-page">
+            <div className="admin-page-main">
+                <H2>Panel de Administración</H2>
+                <div className="card-grid">
+                    {cardData.map((card, index) => (
+                        <Card
+                            key={index}
+                            title={card.title}
+                            description={card.description}
+                            imageSrc={card.imageSrc}
+                            footer={<Link title={card.titleLink} className="admin-card-link" to={card.link}>{card.textButton}</Link>}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Admin;

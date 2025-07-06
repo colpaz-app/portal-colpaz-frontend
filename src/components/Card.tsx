@@ -23,11 +23,11 @@ const Card: React.FC<CardProps> = ({
             <div className="card-header">
                 <h2 className="card-title">{title}</h2>
             </div>
-            <div className="card-image-container">
-                {imageSrc && (
+            {imageSrc && (
+                <div className="card-image-container">
                     <img className="card-image" src={imageSrc} alt={imageAlt} />
-                )}
-            </div>
+                </div>
+            )}
             <div className="card-body">
                 {description && <p className="card-description">{description}</p>}
                 {children}

@@ -55,6 +55,32 @@
     "errorTitle": "Authentication Error",
     "successTitle": "Welcome"
   },
+  "adminPanel": {
+    "title": "Administration Panel",
+    "cards": {
+      "banners": {
+        "title": "Banners",
+        "description": "Site banner management",
+        "titleLink": "Go Manage Banners"
+      },
+      "translatedBanners": {
+        "title": "Translated Banners",
+        "description": "Management of translated site banners",
+        "titleLink": "Go Manage Translated Banners"
+      },
+      "languages": {
+        "title": "Languages",
+        "description": "Site language management",
+        "titleLink": "Go Manage Languages"
+      },
+      "users": {
+        "title": "Users",
+        "description": "Site user management",
+        "titleLink": "Go Manage Users"
+      }
+    },
+    "manage": "Manage"
+  },
   "logout": {
     "title": "Logging out...",
     "message": "Redirecting to the home page"
