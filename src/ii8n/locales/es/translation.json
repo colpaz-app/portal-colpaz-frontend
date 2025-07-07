@@ -102,7 +102,8 @@
     "createdBy": "Creado por",
     "searchByPlaceholder": "Buscar por",
     "name": "Nombre",
-    "code": "Código"
+    "code": "Código",
+    "imageUrl": "URL de imagen"
   },
   "table": {
     "noData": "No hay datos disponibles",
@@ -118,7 +119,9 @@
     "delete": "Eliminar",
     "view": "Ver",
     "name": "Nombre",
-    "code": "Código"
+    "code": "Código",
+    "imageUrl": "URL de imagen",
+    "viewImage": "Ver imagen"
   },
   "logout": {
     "title": "Cerrando sesión...",
@@ -143,7 +146,7 @@
     "decreaseFont": "Reducir fuente",
     "highContrast": "Contraste alto",
     "reset": "Restablecer ajustes",
-    "secretary": "Secretaría de Educación de Boyacá",
+    "darkMode": "Modo oscuro",
     "relayCenter": "Centro de Relevo",
     "openMenu": "Abrir menú de accesibilidad"
   },

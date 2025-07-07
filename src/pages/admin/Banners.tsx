@@ -40,7 +40,6 @@ const Banners = () => {
     const [filters, setFilters] = useState<Record<string, string>>({});
 
     const filterConfig: FilterConfig[] = [
-        { key: 'title', label: t('filtersBar.title') },
         { key: 'status', label: t('filtersBar.status') },
         { key: 'createdAt', label: t('filtersBar.createdAt') },
         { key: 'createdBy', label: t('filtersBar.createdBy') }
@@ -101,7 +100,21 @@ const Banners = () => {
                     <Table
                         data={paginatedData}
                         columns={[
-                            { header: t('table.title'), accessor: 'title' },
+                            {
+                                header: t('table.imageUrl'),
+                                accessor: 'imageUrl',
+                                render: (value: unknown) => {
+                                    const url = String(value);
+                                    const isUrl = /^https?:\/\//i.test(url);
+                                    return isUrl ? (
+                                        <a href={url} target="_blank" rel="noopener noreferrer">
+                                            {t('table.viewImage')}
+                                        </a>
+                                    ) : (
+                                        url
+                                    );
+                                }
+                            },
                             { header: t('table.createdAt'), accessor: 'createdAt' },
                             { header: t('table.createdBy'), accessor: 'createdBy' },
                             { header: t('table.status'), accessor: 'status' },

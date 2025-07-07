@@ -10,6 +10,7 @@ const Accessibility = () => {
     increaseFont,
     decreaseFont,
     toggleContrast,
+    toggleDarkMode,
     resetAccessibility,
   } = useAccessibility();
 
@@ -25,20 +26,16 @@ const Accessibility = () => {
         <Button size="icon" onClick={decreaseFont} title={t('accessibility.decreaseFont')}>
           <i className="fas fa-minus"></i>
         </Button>
+        <Button size="icon" onClick={toggleDarkMode} title={t('accessibility.darkMode')}>
+          <i className="fas fa-moon"></i>
+        </Button>
+
         <Button size="icon" onClick={toggleContrast} title={t('accessibility.highContrast')}>
           <i className="fas fa-adjust"></i>
         </Button>
         <Button size="icon" onClick={resetAccessibility} title={t('accessibility.reset')}>
           <i className="fas fa-sync-alt"></i>
         </Button>
-        <a
-          href="http://sedboyaca.gov.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title={t('accessibility.secretary')}
-        >
-          <i className="fas fa-university"></i>
-        </a>
         <a
           href="https://www.centroderelevo.gov.co/"
           target="_blank"

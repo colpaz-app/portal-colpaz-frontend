@@ -4,13 +4,16 @@ import { useTranslation } from 'react-i18next';
 
 interface TableProps<T> {
     data: T[];
-    columns: { header: string; accessor: keyof T | ((item: T) => React.ReactNode) }[];
+    columns: {
+        header: string;
+        accessor: keyof T | ((item: T) => React.ReactNode);
+        render?: (value: unknown, item: T) => React.ReactNode;
+    }[];
     actions?: (item: T) => React.ReactNode;
 }
 
 function Table<T>({ data, columns, actions }: TableProps<T>) {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
     const { t } = useTranslation();
 
     useEffect(() => {
@@ -24,10 +27,13 @@ function Table<T>({ data, columns, actions }: TableProps<T>) {
             <div className="mobile-cards">
                 {data.map((item, i) => {
                     const titleColumn = columns[0];
-                    const titleValue =
+                    const rawTitleValue =
                         typeof titleColumn.accessor === 'function'
                             ? titleColumn.accessor(item)
-                            : String(item[titleColumn.accessor]);
+                            : item[titleColumn.accessor];
+                    const titleValue = titleColumn.render
+                        ? titleColumn.render(rawTitleValue, item)
+                        : String(rawTitleValue);
 
                     return (
                         <div key={i} className="card-row">
@@ -37,16 +43,18 @@ function Table<T>({ data, columns, actions }: TableProps<T>) {
 
                             <div className="card-body">
                                 {columns.slice(1).map((col, j) => {
-                                    const label = col.header;
-                                    const value =
+                                    const rawValue =
                                         typeof col.accessor === 'function'
                                             ? col.accessor(item)
-                                            : String(item[col.accessor]);
+                                            : item[col.accessor];
+                                    const renderedValue = col.render
+                                        ? col.render(rawValue, item)
+                                        : String(rawValue);
 
                                     return (
                                         <div key={j} className="card-field">
-                                            <span className="card-field-label">{label}</span>
-                                            <span className="card-field-value">{value}</span>
+                                            <span className="card-field-label">{col.header}</span>
+                                            <span className="card-field-value">{renderedValue}</span>
                                         </div>
                                     );
                                 })}
@@ -76,13 +84,17 @@ function Table<T>({ data, columns, actions }: TableProps<T>) {
                 <tbody>
                     {data.map((item, i) => (
                         <tr key={i}>
-                            {columns.map((col, j) => (
-                                <td key={j}>
-                                    {typeof col.accessor === 'function'
+                            {columns.map((col, j) => {
+                                const rawValue =
+                                    typeof col.accessor === 'function'
                                         ? col.accessor(item)
-                                        : String(item[col.accessor])}
-                                </td>
-                            ))}
+                                        : item[col.accessor];
+                                const renderedValue = col.render
+                                    ? col.render(rawValue, item)
+                                    : String(rawValue);
+
+                                return <td key={j}>{renderedValue}</td>;
+                            })}
                             {actions && (
                                 <td className="actions-cell">{actions(item)}</td>
                             )}

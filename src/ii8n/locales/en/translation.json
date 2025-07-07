@@ -103,7 +103,8 @@
     "createdBy": "Created By",
     "searchByPlaceholder": "Search by",
     "name": "Name",
-    "code": "Code"
+    "code": "Code",
+    "imageUrl": "Image URL"
   },
   "table": {
     "noData": "No data available",
@@ -118,7 +119,9 @@
     "delete": "Delete",
     "view": "View",
     "name": "Name",
-    "code": "Code"
+    "code": "Code",
+    "imageUrl": "Image URL",
+    "viewImage": "View Image"
   },
   "logout": {
     "title": "Logging out...",
@@ -143,7 +146,7 @@
     "decreaseFont": "Decrease font size",
     "highContrast": "High contrast",
     "reset": "Reset settings",
-    "secretary": "Boyacá Education Secretariat",
+    "darkMode": "Dark mode",
     "relayCenter": "Relay Center",
     "openMenu": "Open accessibility menu"
   },

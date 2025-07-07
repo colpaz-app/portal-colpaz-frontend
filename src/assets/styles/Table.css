@@ -81,21 +81,27 @@ th .th-content {
 .dark-mode .table {
   background-color: var(--accent-2-bg);
 }
+
 .dark-mode th {
   background-color: var(--primary-blue);
   color: var(--primary-white);
 }
-.dark-mode td {
+
+.dark-mode td,
+.dark-mode td a {
   color: var(--primary-white);
 }
+
 .dark-mode tbody tr:hover {
   background-color: #444;
 }
+
 .dark-mode .filter-input {
   background-color: var(--primary-light-gray);
   color: var(--primary-white);
   border-color: var(--primary-white);
 }
+
 .dark-mode .th-label,
 .dark-mode .sort-icon {
   color: var(--primary-white);
