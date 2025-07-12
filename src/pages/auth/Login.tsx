@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Button from '../components/Button';
-import '../assets/styles/Login.css';
-import { images } from "../assets/images";
+import Button from '../../components/Button';
+import '../../assets/styles/auth/Login.css';
+import { images } from "../../assets/images";
 import { useTranslation } from 'react-i18next';
-import { useHttp } from '../hooks/useHttp';
+import { useHttp } from '../../hooks/useHttp';
 import { useNavigate } from 'react-router-dom';
-import Modal from '../components/Modal';
+import Modal from '../../components/Modal';
 
 interface AuthResponse {
     token: string;

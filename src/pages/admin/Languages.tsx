@@ -12,8 +12,6 @@ import { usePagination } from '../../hooks/usePagination';
 
 import type { Language } from '../../types/Language';
 
-import '../../assets/styles/admin/Banners.css';
-
 interface FilterConfig {
     key: keyof Language;
     label: string;

@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import '../assets/styles/Admin.css';
+import '../assets/styles/admin/Admin.css';
 import H2 from "../components/H2";
 import { images } from "../assets/images";
 import { Link } from "react-router-dom";

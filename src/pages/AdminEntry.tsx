@@ -1,6 +1,6 @@
 import { images } from '../assets/images';
 import { useTranslation } from 'react-i18next';
-import '../assets/styles/AdminEntry.css';
+import '../assets/styles/admin/AdminEntry.css';
 import H2 from '../components/H2';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';

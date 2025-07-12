@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import MainLayout from '../layout/MainLayout';
 import AuthLayout from '../layout/AuthLayout';
-import Login from '../pages/Login';
-import Logout from '../pages/Logout';
+import Login from '../pages/auth/Login';
+import Logout from '../pages/auth/Logout';
 import AdminEntry from '../pages/AdminEntry';
 import AdminEntryLayout from '../layout/AdminEntryLayout';
 import SiteMap from '../pages/Sitemap';

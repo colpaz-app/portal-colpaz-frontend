@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { images } from '../assets/images';
+import { images } from '../../assets/images';
 import { useTranslation } from 'react-i18next';
-import '../assets/styles/Login.css';
+import '../../assets/styles/auth/Login.css';
 
 const Logout = () => {
   const navigate = useNavigate();
