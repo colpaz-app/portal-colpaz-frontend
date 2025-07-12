@@ -1,6 +1,8 @@
 import '../assets/styles/FiltersBar.css';
 import Button from './Button';
 import { useTranslation } from 'react-i18next';
+import Label from './Label';
+import Input from './Input';
 
 export interface FilterConfig {
   key: string;
@@ -30,9 +32,10 @@ export default function FiltersBar({
       <div className="filters-inputs">
         {filterConfig.map(({ key, label, placeholder }) => (
           <div key={key} className="filter-group">
-            <label htmlFor={key}>{label}</label>
-            <input
+            <Label htmlFor={key}>{label}</Label>
+            <Input
               id={key}
+              name={key}
               type="text"
               placeholder={placeholder || `${t('filtersBar.searchByPlaceholder')} ${label.toLowerCase()}...`}
               value={filters[key] || ''}

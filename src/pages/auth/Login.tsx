@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useHttp } from '../../hooks/useHttp';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../components/Modal';
+import Input from '../../components/Input';
 
 interface AuthResponse {
     token: string;
@@ -40,9 +41,6 @@ const Login = () => {
         if (result) {
             localStorage.setItem('token', result.token);
             localStorage.setItem('user', JSON.stringify(result.user));
-            setModalType('success');
-            setModalMessage(t('login.success'));
-            setShowModal(true);
             navigate('/');
         } else {
             setModalType('error');
@@ -74,24 +72,26 @@ const Login = () => {
                     <h2 className="login-title mb-4">{t('login.title')}</h2>
 
                     <form className="login-form" onSubmit={handleSubmit}>
-                        <label htmlFor="username">{t('login.username')}</label>
-                        <input
+                        <Input
+                            name="username"
                             type="text"
-                            id="username"
                             value={username}
-                            onChange={e => setUsername(e.target.value)}
+                            onChange={(e) => setUsername(e.target.value)}
                             placeholder={t('login.usernamePlaceholder')}
                             required
+                            label={t('login.username')}
+                            wrapperClassName="mb-3"
                         />
 
-                        <label htmlFor="password">{t('login.password')}</label>
-                        <input
+                        <Input
+                            name="password"
                             type="password"
-                            id="password"
                             value={password}
-                            onChange={e => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder={t('login.passwordPlaceholder')}
                             required
+                            label={t('login.password')}
+                            wrapperClassName="mb-3"
                         />
 
                         <div className="section-button">

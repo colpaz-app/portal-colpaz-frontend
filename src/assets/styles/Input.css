@@ -1,0 +1,65 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-base);
+  border: 2px solid var(--primary-light-gray);
+  border-radius: 0.375rem;
+  background-color: var(--primary-white);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+}
+
+.input-error {
+  border-color: var(--color-error);
+}
+
+.input-error-message {
+  font-size: 0.875rem;
+  color: var(--color-error);
+  margin-top: 0.35rem;
+}
+
+.input-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-password-wrapper .input-field {
+  padding-right: 2.5rem;
+}
+
+.input-password-toggle {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  color: var(--primary-gray);
+  font-size: 1rem;
+}
+
+.input-password-toggle:hover {
+  color: var(--primary-blue);
+}
+
+.dark-mode .input-field {
+  background-color: var(--primary-light-gray);
+  color: var(--primary-white);
+  border-color: var(--primary-gray);
+}

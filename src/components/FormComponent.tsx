@@ -1,5 +1,7 @@
 import Button from './Button';
 import '../assets/styles/FormComponent.css';
+import Input from './Input';
+import Label from './Label';
 
 interface Field<T> {
     name: keyof T;
@@ -49,7 +51,7 @@ function FormComponent<T>({
 
                 return (
                     <div key={inputId} className="form-group">
-                        <label htmlFor={inputId}>{field.label}</label>
+                        <Label htmlFor={inputId}>{field.label}</Label>
 
                         {field.type === 'textarea' ? (
                             <textarea
@@ -60,20 +62,13 @@ function FormComponent<T>({
                                 }
                             />
                         ) : (
-                            <input
+                            <Input
                                 id={inputId}
+                                name={String(field.name)}
                                 type={field.type || 'text'}
-                                value={
-                                    field.type === 'checkbox'
-                                        ? undefined
-                                        : String(value ?? '')
-                                }
-                                checked={
-                                    field.type === 'checkbox'
-                                        ? Boolean(value)
-                                        : undefined
-                                }
-                                onChange={(e) =>
+                                value={field.type === 'checkbox' ? undefined : String(value ?? '')}
+                                checked={field.type === 'checkbox' ? Boolean(value) : undefined}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                                     onChange(
                                         field.name,
                                         (
@@ -97,8 +92,9 @@ function FormComponent<T>({
                             <h4>{lang.toUpperCase()}</h4>
                             {translations.fields.map((field) => (
                                 <div key={`${lang}-${field}`} className="form-group">
-                                    <label>{field}</label>
-                                    <input
+                                    <Label>{field}</Label>
+                                    <Input
+                                        name={`${lang}-${field}`}
                                         type="text"
                                         value={translations.values[lang]?.[field] || ''}
                                         onChange={(e) =>
