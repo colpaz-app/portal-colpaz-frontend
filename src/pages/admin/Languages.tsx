@@ -28,7 +28,9 @@ const Languages = () => {
         loading,
         error,
         sendRequest
-    } = useHttp<Language[]>('/v1/languages');
+    } = useHttp<Language[]>('/v1/languages', {
+        token: localStorage.getItem('token') || ''
+    });
 
     useEffect(() => {
         sendRequest();

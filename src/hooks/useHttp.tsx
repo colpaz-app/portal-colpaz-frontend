@@ -32,7 +32,9 @@ export function useHttp<T = unknown>(
                 method: options.method || 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${options.token || localStorage.getItem('token') || ''}`,
+                    ...(options.token
+                        ? { Authorization: `Bearer ${options.token}` }
+                        : {}),
                     ...options.headers,
                 },
                 body: options.body ? JSON.stringify(options.body) : undefined,

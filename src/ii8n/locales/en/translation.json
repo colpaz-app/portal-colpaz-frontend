@@ -123,12 +123,19 @@
     "imageUrl": "Image URL",
     "viewImage": "View Image"
   },
+  "session": {
+    "closedTitle": "Session Closed",
+    "closedMessage": "Your session has been closed due to inactivity or lost token.",
+    "warningTitle": "Inactivity Detected",
+    "warningMessage": "Your session will expire in 1 minute due to inactivity. Move your mouse or click to stay logged in."
+  },
   "logout": {
     "title": "Logging out...",
     "message": "Redirecting to the home page"
   },
   "common": {
-    "close": "Close"
+    "close": "Close",
+    "ok": "Got it"
   },
   "header": {
     "logoAlt": "Colpaz Logo",

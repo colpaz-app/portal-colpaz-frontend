@@ -107,11 +107,6 @@
 
 .dark-mode .modal-header {
   background-color: var(--primary-blue-dark);
-  color: var(--primary-black);
-}
-
-.dark-mode .modal-close {
-  color: var(--primary-black);
 }
 
 .dark-mode .modal-body,

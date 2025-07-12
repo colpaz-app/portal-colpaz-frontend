@@ -27,7 +27,9 @@ const Banners = () => {
         loading,
         error,
         sendRequest
-    } = useHttp<Banner[]>('/v1/banners');
+    } = useHttp<Banner[]>('/v1/banners', {
+        token: localStorage.getItem('token') || ''
+    });
 
     useEffect(() => {
         sendRequest();
