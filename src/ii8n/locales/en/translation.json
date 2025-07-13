@@ -133,6 +133,13 @@
     "title": "Logging out...",
     "message": "Redirecting to the home page"
   },
+  "messages": {
+    "noDataTitle": "No Data Available",
+    "noDataMessage": "There are no records to display at this time.",
+    "errors": {
+      "tokenExpired": "Your session has expired. Please log in again."
+    }
+  },
   "common": {
     "close": "Close",
     "ok": "Got it"

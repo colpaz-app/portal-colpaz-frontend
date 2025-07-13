@@ -13,6 +13,7 @@ import type { Banner } from '../../types/Banner';
 import '../../assets/styles/admin/Banners.css';
 
 import Button from '../../components/Button';
+import Message from '../../components/Message';
 
 interface FilterConfig {
     key: keyof Banner | 'status';
@@ -88,7 +89,13 @@ const Banners = () => {
             </div>
 
             {loading && <p>{t('loading')}</p>}
-            {error && <p style={{ color: 'red' }}>{t('error')}: {error}</p>}
+            {error && (
+                <Message type="error" title={t('error')}>
+                    {t('messages.errors.tokenExpired')}
+                    <br />
+                    {error}
+                </Message>
+            )}
 
             {!loading && !error && banners && banners.length > 0 && (
                 <>
@@ -142,7 +149,9 @@ const Banners = () => {
             )}
 
             {!loading && !error && filteredData.length === 0 && (
-                <p>{t('noData')}</p>
+                <Message type="warning" title={t('messages.noDataTitle')}>
+                    {t('messages.noDataMessage')}
+                </Message>
             )}
         </div>
     );

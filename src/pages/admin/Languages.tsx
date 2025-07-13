@@ -11,6 +11,7 @@ import { useHttp } from '../../hooks/useHttp';
 import { usePagination } from '../../hooks/usePagination';
 
 import type { Language } from '../../types/Language';
+import Message from '../../components/Message';
 
 interface FilterConfig {
     key: keyof Language;
@@ -107,7 +108,9 @@ const Languages = () => {
             )}
 
             {!loading && !error && filteredData.length === 0 && (
-                <p>{t('noData')}</p>
+                <Message type="info" title={t('messages.noDataTitle')}>
+                    {t('messages.noDataMessage')}
+                </Message>
             )}
         </div>
     );

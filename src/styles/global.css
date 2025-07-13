@@ -10,6 +10,7 @@
   --border-footer: #cccccc;
   --color-success: #2e7d32;
   --color-error: #c62828;
+  --color-warning: #664d03;
 
   /* Tipografía */
   --font-family-base: Arial, Helvetica, sans-serif;
@@ -116,7 +117,7 @@
   --btn-success-active-fg: var(--primary-white);
 
   /* Warning (ahora azul) */
-  --btn-warning-bg: var(--primary-blue);
+  --btn-warning-bg: var(--color-warning);
   --btn-warning-fg: var(--primary-white);
   --btn-warning-hover-bg: #2f37a0;
   --btn-warning-hover-fg: var(--primary-white);
@@ -138,6 +139,7 @@
   --primary-light-gray: #3a3a3a;
   --color-success: lightgreen;
   --color-error: salmon;
+  --color-warning: #4e3b00;
 
   --text-color: var(--primary-white);
   --text-link-color: var(--primary-blue);
@@ -171,7 +173,7 @@
   --btn-secondary-active-fg: var(--primary-white);
 
   /* Warning (azul también en oscuro) */
-  --btn-warning-bg: var(--primary-blue);
+  --btn-warning-bg: var(--color-warning);
   --btn-warning-fg: var(--primary-white);
   --btn-warning-hover-bg: #2f37a0;
   --btn-warning-hover-fg: var(--primary-white);
