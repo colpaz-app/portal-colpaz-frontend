@@ -130,7 +130,7 @@ const Banners = () => {
                         ]}
                         actions={(item) => (
                             <>
-                                <Button variant='warning' size="icon" title={t('table.edit')} onClick={() => alert(`${t('table.edit')} ${item.id}`)}>
+                                <Button variant='primary' size="icon" title={t('table.edit')} onClick={() => alert(`${t('table.edit')} ${item.id}`)}>
                                     <i className="fa-solid fa-pen"></i>
                                 </Button>
                                 <Button variant='danger' size="icon" title={t('table.delete')} onClick={() => alert(`${t('table.delete')} ${item.id}`)}>
