@@ -89,7 +89,7 @@ const Languages = () => {
                         ]}
                         actions={(item) => (
                             <Button
-                                variant='warning'
+                                variant='primary'
                                 size="icon"
                                 title={t('table.view')}
                                 onClick={() => alert(`${t('table.view')} ${item.code}`)}
