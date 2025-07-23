@@ -124,10 +124,8 @@
     "viewImage": "Ver imagen"
   },
   "session": {
-    "closedTitle": "Sesión cerrada",
-    "closedMessage": "Tu sesión ha sido cerrada por inactividad o pérdida del token.",
     "warningTitle": "Inactividad detectada",
-    "warningMessage": "Tu sesión se cerrará en 1 minuto por inactividad. Mueve el mouse o haz clic para mantenerla activa."
+    "warningMessage": "Tu sesión se cerrará en 1 minuto por inactividad. Haz clic para mantenerla activa."
   },
   "logout": {
     "title": "Cerrando sesión...",

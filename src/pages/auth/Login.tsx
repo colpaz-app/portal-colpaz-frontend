@@ -41,6 +41,7 @@ const Login = () => {
         if (result) {
             localStorage.setItem('token', result.token);
             localStorage.setItem('user', JSON.stringify(result.user));
+            sessionStorage.removeItem('sessionEnded');
             navigate('/');
         } else {
             setModalType('error');

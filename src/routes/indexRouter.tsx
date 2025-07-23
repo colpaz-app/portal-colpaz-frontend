@@ -14,41 +14,44 @@ import Admin from '../pages/Admin';
 import Banners from '../pages/admin/Banners';
 import NotFoundLayout from '../layout/NotFoundLayou';
 import Languages from '../pages/admin/Languages';
+import AppShell from '../components/AppShell';
 
 const IndexRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/sitemap" element={<SiteMap />} />
-        </Route>
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/logout" element={
+        <Route element={<AppShell />}>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/sitemap" element={<SiteMap />} />
+          </Route>
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={
+              <ProtectedRoute>
+                <Logout />
+              </ProtectedRoute>
+            }/>
+          </Route>
+          <Route element={
             <ProtectedRoute>
-              <Logout />
+              <AdminEntryLayout />
             </ProtectedRoute>
-          }/>
-        </Route>
-        <Route element={
-          <ProtectedRoute>
-            <AdminEntryLayout />
-          </ProtectedRoute>
-        }>
-          <Route path="/admin-entry" element={<AdminEntry />} />
-        </Route>
-        <Route element={
-          <ProtectedRoute>
-            <AdminLayout />
-          </ProtectedRoute>
-        }>
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/admin/banners" element={<Banners />} />
-          <Route path="/admin/languages" element={<Languages />} />
-        </Route>
-        <Route element={<NotFoundLayout />}>
-          <Route path="*" element={<NotFoundPage />} />
+          }>
+            <Route path="/admin-entry" element={<AdminEntry />} />
+          </Route>
+          <Route element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/banners" element={<Banners />} />
+            <Route path="/admin/languages" element={<Languages />} />
+          </Route>
+          <Route element={<NotFoundLayout />}>
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
