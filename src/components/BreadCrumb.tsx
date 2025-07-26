@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../assets/styles/BreadCrumb.css';
+import { useTranslation } from 'react-i18next';
 
 interface Crumb {
     label: string;
@@ -13,7 +14,9 @@ interface BreadCrumbProps {
 }
 
 export function BreadCrumbBanner({ items, title, image }: BreadCrumbProps) {
-    const homeCrumb: Crumb = { label: 'Inicio', to: '/' };
+    const { t } = useTranslation();
+
+    const homeCrumb: Crumb = { label: t('home.home'), to: '/' };
     const allItems = [homeCrumb, ...items];
 
     const hasImage = !!image;

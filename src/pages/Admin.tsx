@@ -1,6 +1,5 @@
 import Card from "../components/Card";
 import '../assets/styles/admin/Admin.css';
-import H2 from "../components/H2";
 import { images } from "../assets/images";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -58,10 +57,9 @@ const Admin = () => {
             <div className="admin-page-main">
                 <BreadCrumbBanner
                     items={[
-                        { label: 'Panel de administración' }
+                        { label: t("adminPanel.title") }
                     ]}
                 />
-                <H2>{t("adminPanel.title")}</H2>
                 <div className="card-grid">
                     {paginatedData.map((card, index) => (
                         <Card

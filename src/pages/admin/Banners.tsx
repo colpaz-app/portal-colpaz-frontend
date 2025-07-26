@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import H2 from '../../components/H2';
 import FiltersBar from '../../components/FiltersBar';
 import Table from '../../components/Table';
 import Pagination from '../../components/Pagination';
@@ -83,12 +82,10 @@ const Banners = () => {
         <div className="admin-banners-page">
             <BreadCrumbBanner
                 items={[
-                    { label: 'Panel de administración', to: '/admin' },
-                    { label: 'Banners' }
+                    { label: t("adminPanel.title"), to: '/admin' },
+                    { label: t('adminPanel.banners.title') }
                 ]}
             />
-            <H2>{t('adminPanel.banners.title')}</H2>
-
             <div className="button-add-section">
                 <Button variant="primary" onClick={() => alert('Abrir formulario de creación')}>
                     {t('adminPanel.banners.addNew')}

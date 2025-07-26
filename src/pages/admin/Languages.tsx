@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import H2 from '../../components/H2';
 import FiltersBar from '../../components/FiltersBar';
 import Table from '../../components/Table';
 import Pagination from '../../components/Pagination';
@@ -69,13 +68,10 @@ const Languages = () => {
         <div className="admin-languages-page">
             <BreadCrumbBanner
                 items={[
-                    { label: 'Panel de administración', to: '/admin' },
-                    { label: 'Lenguajes' }
+                    { label: t("adminPanel.title"), to: '/admin' },
+                    { label: t("adminPanel.languages.title") }
                 ]}
             />
-
-            <H2>{t('adminPanel.languages.title')}</H2>
-
             {loading && <p>{t('loading')}</p>}
             {error && <p style={{ color: 'red' }}>{t('error')}: {error}</p>}
 
