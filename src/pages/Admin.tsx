@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { usePagination } from "../hooks/usePagination";
 import Pagination from "../components/Pagination";
+import { BreadCrumbBanner } from "../components/Breadcrumb";
 
 const Admin = () => {
     const { t } = useTranslation();
@@ -55,6 +56,11 @@ const Admin = () => {
     return (
         <div className="admin-page">
             <div className="admin-page-main">
+                <BreadCrumbBanner
+                    items={[
+                        { label: 'Panel de administración' }
+                    ]}
+                />
                 <H2>{t("adminPanel.title")}</H2>
                 <div className="card-grid">
                     {paginatedData.map((card, index) => (

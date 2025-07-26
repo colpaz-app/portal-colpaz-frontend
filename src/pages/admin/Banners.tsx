@@ -14,6 +14,7 @@ import '../../assets/styles/admin/Banners.css';
 
 import Button from '../../components/Button';
 import Message from '../../components/Message';
+import { BreadCrumbBanner } from '../../components/Breadcrumb';
 
 interface FilterConfig {
     key: keyof Banner | 'status';
@@ -80,6 +81,12 @@ const Banners = () => {
 
     return (
         <div className="admin-banners-page">
+            <BreadCrumbBanner
+                items={[
+                    { label: 'Panel de administración', to: '/admin' },
+                    { label: 'Banners' }
+                ]}
+            />
             <H2>{t('adminPanel.banners.title')}</H2>
 
             <div className="button-add-section">
@@ -149,7 +156,7 @@ const Banners = () => {
             )}
 
             {!loading && !error && filteredData.length === 0 && (
-                <Message type="warning" title={t('messages.noDataTitle')}>
+                <Message type="info" title={t('messages.noDataTitle')}>
                     {t('messages.noDataMessage')}
                 </Message>
             )}

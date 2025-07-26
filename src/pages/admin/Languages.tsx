@@ -12,6 +12,7 @@ import { usePagination } from '../../hooks/usePagination';
 
 import type { Language } from '../../types/Language';
 import Message from '../../components/Message';
+import { BreadCrumbBanner } from '../../components/Breadcrumb';
 
 interface FilterConfig {
     key: keyof Language;
@@ -66,6 +67,13 @@ const Languages = () => {
 
     return (
         <div className="admin-languages-page">
+            <BreadCrumbBanner
+                items={[
+                    { label: 'Panel de administración', to: '/admin' },
+                    { label: 'Lenguajes' }
+                ]}
+            />
+
             <H2>{t('adminPanel.languages.title')}</H2>
 
             {loading && <p>{t('loading')}</p>}

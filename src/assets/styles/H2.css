@@ -4,6 +4,9 @@
   position: relative;
   display: inline-block;
   margin: 0px;
+  max-width: 100%;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .heading-underline {
@@ -15,4 +18,23 @@
   background-color: var(--primary-blue);
   content: '';
   border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .heading-h2 {
+    max-width: calc(100vw - 4rem);
+    font-size: var(--font-size-h3);
+    line-height: 1.2;
+  }
+  
+  .heading-underline {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container .heading-h2,
+  .content .heading-h2 {
+    max-width: 100%;
+  }
 }
