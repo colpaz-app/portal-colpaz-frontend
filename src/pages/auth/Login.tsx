@@ -10,6 +10,7 @@ import Input from '../../components/Input';
 
 interface AuthResponse {
     token: string;
+    refreshToken: string;
     user: {
         id: number;
         username: string;
@@ -41,6 +42,7 @@ const Login = () => {
         if (result) {
             localStorage.setItem('token', result.token);
             localStorage.setItem('user', JSON.stringify(result.user));
+            localStorage.setItem('refreshToken', result.refreshToken);
             sessionStorage.removeItem('sessionEnded');
             navigate('/');
         } else {

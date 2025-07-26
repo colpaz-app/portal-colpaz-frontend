@@ -124,6 +124,10 @@
     "viewImage": "Ver imagen"
   },
   "session": {
+    "inactivityWarningTitle": "Sesión inactiva",
+    "inactivityWarningMessage": "Tu sesión está inactiva. ¿Deseas continuar?\n\nTiempo restante: {{count}}s",
+    "tokenWarningTitle": "Sesión por expirar",
+    "tokenWarningMessage": "Tu sesión está por expirar. ¿Deseas mantenerla activa?\n\nTiempo restante: {{count}}s",
     "warningTitle": "Inactividad detectada",
     "warningMessage": "Tu sesión se cerrará en 1 minuto por inactividad. Haz clic para mantenerla activa."
   },
@@ -140,7 +144,10 @@
   },
   "common": {
     "close": "Cerrar",
-    "ok": "Entendido"
+    "ok": "Entendido",
+    "continue": "Continuar",
+    "maintain": "Mantener sesión",
+    "refreshing": "Renovando..."
   },
   "header": {
     "logoAlt": "Logo Colpaz",

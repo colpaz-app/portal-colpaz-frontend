@@ -124,8 +124,12 @@
     "viewImage": "View Image"
   },
   "session": {
-    "warningTitle": "Inactivity Detected",
-    "warningMessage": "Your session will expire in 1 minute due to inactivity. Click to stay logged in."
+    "inactivityWarningTitle": "Inactive session",
+    "inactivityWarningMessage": "Your session is inactive. Do you want to continue?\n\nTime remaining: {{count}}s",
+    "tokenWarningTitle": "Session about to expire",
+    "tokenWarningMessage": "Your session is about to expire. Do you want to keep it active?\n\nTime remaining: {{count}}s",
+    "warningTitle": "Inactivity detected",
+    "warningMessage": "Your session will close in 1 minute due to inactivity. Click to keep it active."
   },
   "logout": {
     "title": "Logging out...",
@@ -140,7 +144,10 @@
   },
   "common": {
     "close": "Close",
-    "ok": "Got it"
+    "ok": "Got it",
+    "continue": "Continue",
+    "maintain": "Keep session",
+    "refreshing": "Refreshing..."
   },
   "header": {
     "logoAlt": "Colpaz Logo",
